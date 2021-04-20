@@ -1,0 +1,202 @@
+C:\Documents and Settings\Comp\Рабочий стол\Курсач\Курсач\bin\Debug\Курсач.exe
+C:\Documents and Settings\Comp\Рабочий стол\Курсач\Курсач\bin\Debug\Курсач.pdb
+C:\Documents and Settings\Comp\Рабочий стол\Курсач\Курсач\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Comp\Рабочий стол\Курсач\Курсач\obj\x86\Debug\Курсач.Properties.Resources.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач\Курсач\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Comp\Рабочий стол\Курсач\Курсач\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Comp\Рабочий стол\Курсач\Курсач\obj\x86\Debug\Курсач.exe
+C:\Documents and Settings\Comp\Рабочий стол\Курсач\Курсач\obj\x86\Debug\Курсач.pdb
+C:\Documents and Settings\Comp\Рабочий стол\Курсач\Курсач\bin\Debug\Курсач.exe.config
+C:\Users\Andrey\Desktop\Курсач\Курсач\bin\Debug\Курсач.exe.config
+C:\Users\Andrey\Desktop\Курсач\Курсач\obj\x86\Debug\Курсач.exe
+C:\Users\Andrey\Desktop\Курсач\Курсач\obj\x86\Debug\Курсач.pdb
+C:\Users\Andrey\Desktop\Курсач\Курсач\bin\Debug\Курсач.exe
+C:\Users\Andrey\Desktop\Курсач\Курсач\bin\Debug\Курсач.pdb
+C:\Users\Andrey\Desktop\Курсач\Курсач\obj\x86\Debug\Курсач.csprojResolveAssemblyReference.cache
+C:\Users\Andrey\Desktop\Курсач\Курсач\obj\x86\Debug\Курсач.Form1.resources
+C:\Users\Andrey\Desktop\Курсач\Курсач\obj\x86\Debug\Курсач.Properties.Resources.resources
+C:\Users\Andrey\Desktop\Курсач\Курсач\obj\x86\Debug\Курсач.csproj.GenerateResource.Cache
+C:\Documents and Settings\Comp\Рабочий стол\Курсач\Курсач\obj\x86\Debug\Курсач.Основная_форма.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач\Курсач\obj\x86\Debug\Курсач.Создание_записи.resources
+C:\Users\Andrey\Desktop\Курсач1\Курсач\bin\Debug\Курсач.exe.config
+C:\Users\Andrey\Desktop\Курсач1\Курсач\obj\x86\Debug\Курсач.exe
+C:\Users\Andrey\Desktop\Курсач1\Курсач\obj\x86\Debug\Курсач.pdb
+C:\Users\Andrey\Desktop\Курсач1\Курсач\bin\Debug\Курсач.exe
+C:\Users\Andrey\Desktop\Курсач1\Курсач\bin\Debug\Курсач.pdb
+C:\Users\Andrey\Desktop\Курсач1\Курсач\obj\x86\Debug\Курсач.csprojResolveAssemblyReference.cache
+C:\Users\Andrey\Desktop\Курсач1\Курсач\obj\x86\Debug\Курсач.Основная_форма.resources
+C:\Users\Andrey\Desktop\Курсач1\Курсач\obj\x86\Debug\Курсач.Properties.Resources.resources
+C:\Users\Andrey\Desktop\Курсач1\Курсач\obj\x86\Debug\Курсач.Создание_записи.resources
+C:\Users\Andrey\Desktop\Курсач1\Курсач\obj\x86\Debug\Курсач.csproj.GenerateResource.Cache
+C:\Users\Andrey\Desktop\Курсач1\Курсач\obj\x86\Debug\Курсач.Удаление_записи.resources
+C:\Users\Andrey\Desktop\Курсач2\Курсач\bin\Debug\Курсач.exe.config
+C:\Users\Andrey\Desktop\Курсач2\Курсач\obj\x86\Debug\Курсач.exe
+C:\Users\Andrey\Desktop\Курсач2\Курсач\obj\x86\Debug\Курсач.pdb
+C:\Users\Andrey\Desktop\Курсач2\Курсач\bin\Debug\Курсач.exe
+C:\Users\Andrey\Desktop\Курсач2\Курсач\bin\Debug\Курсач.pdb
+C:\Users\Andrey\Desktop\Курсач2\Курсач\obj\x86\Debug\Курсач.csprojResolveAssemblyReference.cache
+C:\Users\Andrey\Desktop\Курсач2\Курсач\obj\x86\Debug\Курсач.Основная_форма.resources
+C:\Users\Andrey\Desktop\Курсач2\Курсач\obj\x86\Debug\Курсач.Properties.Resources.resources
+C:\Users\Andrey\Desktop\Курсач2\Курсач\obj\x86\Debug\Курсач.Создание_записи.resources
+C:\Users\Andrey\Desktop\Курсач2\Курсач\obj\x86\Debug\Курсач.Удаление_записи.resources
+C:\Users\Andrey\Desktop\Курсач2\Курсач\obj\x86\Debug\Курсач.csproj.GenerateResource.Cache
+C:\Users\Andrey\Desktop\Курсач2\Курсач\obj\x86\Debug\Курсач.Создание_записи1.resources
+C:\Users\Andrey\Desktop\Курсач2\Курсач\obj\x86\Debug\Курсач.Удаление_записи1.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач3\Курсач\bin\Debug\Курсач.exe.config
+C:\Documents and Settings\Comp\Рабочий стол\Курсач3\Курсач\obj\x86\Debug\Курсач.exe
+C:\Documents and Settings\Comp\Рабочий стол\Курсач3\Курсач\obj\x86\Debug\Курсач.pdb
+C:\Documents and Settings\Comp\Рабочий стол\Курсач3\Курсач\bin\Debug\Курсач.exe
+C:\Documents and Settings\Comp\Рабочий стол\Курсач3\Курсач\bin\Debug\Курсач.pdb
+C:\Documents and Settings\Comp\Рабочий стол\Курсач3\Курсач\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Comp\Рабочий стол\Курсач3\Курсач\obj\x86\Debug\Курсач.Основная_форма.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач3\Курсач\obj\x86\Debug\Курсач.Properties.Resources.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач3\Курсач\obj\x86\Debug\Курсач.Создание_записи.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач3\Курсач\obj\x86\Debug\Курсач.Создание_записи1.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач3\Курсач\obj\x86\Debug\Курсач.Удаление_записи.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач3\Курсач\obj\x86\Debug\Курсач.Удаление_записи1.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач3\Курсач\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Comp\Рабочий стол\Курсач3\Курсач\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Andrey\Desktop\Курсач4\Курсач\bin\Debug\Курсач.exe.config
+C:\Users\Andrey\Desktop\Курсач4\Курсач\obj\x86\Debug\Курсач.exe
+C:\Users\Andrey\Desktop\Курсач4\Курсач\obj\x86\Debug\Курсач.pdb
+C:\Users\Andrey\Desktop\Курсач4\Курсач\bin\Debug\Курсач.exe
+C:\Users\Andrey\Desktop\Курсач4\Курсач\bin\Debug\Курсач.pdb
+C:\Users\Andrey\Desktop\Курсач4\Курсач\obj\x86\Debug\Курсач.csprojResolveAssemblyReference.cache
+C:\Users\Andrey\Desktop\Курсач4\Курсач\obj\x86\Debug\Курсач.Основная_форма.resources
+C:\Users\Andrey\Desktop\Курсач4\Курсач\obj\x86\Debug\Курсач.Properties.Resources.resources
+C:\Users\Andrey\Desktop\Курсач4\Курсач\obj\x86\Debug\Курсач.Создание_записи.resources
+C:\Users\Andrey\Desktop\Курсач4\Курсач\obj\x86\Debug\Курсач.Создание_записи1.resources
+C:\Users\Andrey\Desktop\Курсач4\Курсач\obj\x86\Debug\Курсач.Удаление_записи.resources
+C:\Users\Andrey\Desktop\Курсач4\Курсач\obj\x86\Debug\Курсач.Удаление_записи1.resources
+C:\Users\Andrey\Desktop\Курсач4\Курсач\obj\x86\Debug\Курсач.csproj.GenerateResource.Cache
+C:\Users\Andrey\Desktop\Курсач4\Курсач\obj\x86\Debug\Курсач.Приветствие.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач5\Курсач\bin\Debug\Курсач.exe.config
+C:\Documents and Settings\Comp\Рабочий стол\Курсач5\Курсач\obj\x86\Debug\Курсач.exe
+C:\Documents and Settings\Comp\Рабочий стол\Курсач5\Курсач\obj\x86\Debug\Курсач.pdb
+C:\Documents and Settings\Comp\Рабочий стол\Курсач5\Курсач\bin\Debug\Курсач.exe
+C:\Documents and Settings\Comp\Рабочий стол\Курсач5\Курсач\bin\Debug\Курсач.pdb
+C:\Documents and Settings\Comp\Рабочий стол\Курсач5\Курсач\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Comp\Рабочий стол\Курсач5\Курсач\obj\x86\Debug\Курсач.Основная_форма.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач5\Курсач\obj\x86\Debug\Курсач.Properties.Resources.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач5\Курсач\obj\x86\Debug\Курсач.Приветствие.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач5\Курсач\obj\x86\Debug\Курсач.Создание_записи.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач5\Курсач\obj\x86\Debug\Курсач.Создание_записи1.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач5\Курсач\obj\x86\Debug\Курсач.Удаление_записи.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач5\Курсач\obj\x86\Debug\Курсач.Удаление_записи1.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач5\Курсач\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Comp\Рабочий стол\Курсач5\Курсач\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Comp\Рабочий стол\Курсач6\Курсач\bin\Debug\Курсач.exe.config
+C:\Documents and Settings\Comp\Рабочий стол\Курсач6\Курсач\obj\x86\Debug\Курсач.exe
+C:\Documents and Settings\Comp\Рабочий стол\Курсач6\Курсач\obj\x86\Debug\Курсач.pdb
+C:\Documents and Settings\Comp\Рабочий стол\Курсач6\Курсач\bin\Debug\Курсач.exe
+C:\Documents and Settings\Comp\Рабочий стол\Курсач6\Курсач\bin\Debug\Курсач.pdb
+C:\Documents and Settings\Comp\Рабочий стол\Курсач6\Курсач\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Comp\Рабочий стол\Курсач6\Курсач\obj\x86\Debug\Курсач.Основная_форма.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач6\Курсач\obj\x86\Debug\Курсач.Properties.Resources.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач6\Курсач\obj\x86\Debug\Курсач.Приветствие.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач6\Курсач\obj\x86\Debug\Курсач.Создание_записи.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач6\Курсач\obj\x86\Debug\Курсач.Создание_записи1.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач6\Курсач\obj\x86\Debug\Курсач.Удаление_записи.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач6\Курсач\obj\x86\Debug\Курсач.Удаление_записи1.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач6\Курсач\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Comp\Рабочий стол\Курсач6\Курсач\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Andrey\Desktop\Курсач7\Курсач\bin\Debug\Курсач.exe.config
+C:\Users\Andrey\Desktop\Курсач7\Курсач\obj\x86\Debug\Курсач.exe
+C:\Users\Andrey\Desktop\Курсач7\Курсач\obj\x86\Debug\Курсач.pdb
+C:\Users\Andrey\Desktop\Курсач7\Курсач\bin\Debug\Курсач.exe
+C:\Users\Andrey\Desktop\Курсач7\Курсач\bin\Debug\Курсач.pdb
+C:\Users\Andrey\Desktop\Курсач7\Курсач\obj\x86\Debug\Курсач.csprojResolveAssemblyReference.cache
+C:\Users\Andrey\Desktop\Курсач7\Курсач\obj\x86\Debug\Курсач.Основная_форма.resources
+C:\Users\Andrey\Desktop\Курсач7\Курсач\obj\x86\Debug\Курсач.Properties.Resources.resources
+C:\Users\Andrey\Desktop\Курсач7\Курсач\obj\x86\Debug\Курсач.Приветствие.resources
+C:\Users\Andrey\Desktop\Курсач7\Курсач\obj\x86\Debug\Курсач.Создание_записи.resources
+C:\Users\Andrey\Desktop\Курсач7\Курсач\obj\x86\Debug\Курсач.Создание_записи1.resources
+C:\Users\Andrey\Desktop\Курсач7\Курсач\obj\x86\Debug\Курсач.Удаление_записи.resources
+C:\Users\Andrey\Desktop\Курсач7\Курсач\obj\x86\Debug\Курсач.Удаление_записи1.resources
+C:\Users\Andrey\Desktop\Курсач7\Курсач\obj\x86\Debug\Курсач.csproj.GenerateResource.Cache
+C:\Documents and Settings\Comp\Рабочий стол\Курсач8\Курсач\bin\Debug\Курсач.exe.config
+C:\Documents and Settings\Comp\Рабочий стол\Курсач8\Курсач\obj\x86\Debug\Курсач.exe
+C:\Documents and Settings\Comp\Рабочий стол\Курсач8\Курсач\obj\x86\Debug\Курсач.pdb
+C:\Documents and Settings\Comp\Рабочий стол\Курсач8\Курсач\bin\Debug\Курсач.exe
+C:\Documents and Settings\Comp\Рабочий стол\Курсач8\Курсач\bin\Debug\Курсач.pdb
+C:\Documents and Settings\Comp\Рабочий стол\Курсач8\Курсач\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Comp\Рабочий стол\Курсач8\Курсач\obj\x86\Debug\Курсач.Основная_форма.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач8\Курсач\obj\x86\Debug\Курсач.Properties.Resources.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач8\Курсач\obj\x86\Debug\Курсач.Приветствие.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач8\Курсач\obj\x86\Debug\Курсач.Создание_записи.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач8\Курсач\obj\x86\Debug\Курсач.Создание_записи1.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач8\Курсач\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Comp\Рабочий стол\Курсач8\Курсач\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Andrey\Desktop\Курсач9\Курсач\bin\Debug\Курсач.exe.config
+C:\Users\Andrey\Desktop\Курсач9\Курсач\obj\x86\Debug\Курсач.exe
+C:\Users\Andrey\Desktop\Курсач9\Курсач\obj\x86\Debug\Курсач.pdb
+C:\Users\Andrey\Desktop\Курсач9\Курсач\obj\x86\Debug\Курсач.csprojResolveAssemblyReference.cache
+C:\Users\Andrey\Desktop\Курсач9\Курсач\obj\x86\Debug\Курсач.Основная_форма.resources
+C:\Users\Andrey\Desktop\Курсач9\Курсач\obj\x86\Debug\Курсач.Properties.Resources.resources
+C:\Users\Andrey\Desktop\Курсач9\Курсач\obj\x86\Debug\Курсач.Пароль.resources
+C:\Users\Andrey\Desktop\Курсач9\Курсач\obj\x86\Debug\Курсач.Приветствие.resources
+C:\Users\Andrey\Desktop\Курсач9\Курсач\obj\x86\Debug\Курсач.Создание_записи.resources
+C:\Users\Andrey\Desktop\Курсач9\Курсач\obj\x86\Debug\Курсач.Создание_записи1.resources
+C:\Users\Andrey\Desktop\Курсач9\Курсач\obj\x86\Debug\Курсач.csproj.GenerateResource.Cache
+C:\Users\Andrey\Desktop\Курсач9\Курсач\bin\Debug\Курсач.exe
+C:\Users\Andrey\Desktop\Курсач9\Курсач\bin\Debug\Курсач.pdb
+C:\Documents and Settings\Comp\Рабочий стол\Курсач10\Курсач\bin\Debug\Курсач.exe.config
+C:\Documents and Settings\Comp\Рабочий стол\Курсач10\Курсач\obj\x86\Debug\Курсач.exe
+C:\Documents and Settings\Comp\Рабочий стол\Курсач10\Курсач\obj\x86\Debug\Курсач.pdb
+C:\Documents and Settings\Comp\Рабочий стол\Курсач10\Курсач\bin\Debug\Курсач.exe
+C:\Documents and Settings\Comp\Рабочий стол\Курсач10\Курсач\bin\Debug\Курсач.pdb
+C:\Documents and Settings\Comp\Рабочий стол\Курсач10\Курсач\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Comp\Рабочий стол\Курсач10\Курсач\obj\x86\Debug\Курсач.Основная_форма.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач10\Курсач\obj\x86\Debug\Курсач.Properties.Resources.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач10\Курсач\obj\x86\Debug\Курсач.Пароль.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач10\Курсач\obj\x86\Debug\Курсач.Приветствие.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач10\Курсач\obj\x86\Debug\Курсач.Создание_записи.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач10\Курсач\obj\x86\Debug\Курсач.Создание_записи1.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач10\Курсач\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Comp\Рабочий стол\Курсач10\Курсач\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Comp\Рабочий стол\Курсач10\Курсач\obj\x86\Debug\Курсач.О_программе.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач11\Курсач\bin\Debug\Курсач.exe.config
+C:\Documents and Settings\Comp\Рабочий стол\Курсач11\Курсач\obj\x86\Debug\Курсач.exe
+C:\Documents and Settings\Comp\Рабочий стол\Курсач11\Курсач\obj\x86\Debug\Курсач.pdb
+C:\Documents and Settings\Comp\Рабочий стол\Курсач11\Курсач\bin\Debug\Курсач.exe
+C:\Documents and Settings\Comp\Рабочий стол\Курсач11\Курсач\bin\Debug\Курсач.pdb
+C:\Documents and Settings\Comp\Рабочий стол\Курсач11\Курсач\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Comp\Рабочий стол\Курсач11\Курсач\obj\x86\Debug\Курсач.О_программе.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач11\Курсач\obj\x86\Debug\Курсач.Основная_форма.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач11\Курсач\obj\x86\Debug\Курсач.Properties.Resources.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач11\Курсач\obj\x86\Debug\Курсач.Пароль.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач11\Курсач\obj\x86\Debug\Курсач.Приветствие.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач11\Курсач\obj\x86\Debug\Курсач.Создание_записи.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач11\Курсач\obj\x86\Debug\Курсач.Создание_записи1.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач11\Курсач\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Comp\Рабочий стол\Курсач11\Курсач\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\Курсовая\Курсач12(Готовый)\Курсач\bin\Debug\Курсач.exe.config
+F:\Курсовая\Курсач12(Готовый)\Курсач\obj\x86\Debug\Курсач.exe
+F:\Курсовая\Курсач12(Готовый)\Курсач\obj\x86\Debug\Курсач.pdb
+F:\Курсовая\Курсач12(Готовый)\Курсач\bin\Debug\Курсач.exe
+F:\Курсовая\Курсач12(Готовый)\Курсач\bin\Debug\Курсач.pdb
+F:\Курсовая\Курсач12(Готовый)\Курсач\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Курсовая\Курсач12(Готовый)\Курсач\obj\x86\Debug\Курсач.О_программе.resources
+F:\Курсовая\Курсач12(Готовый)\Курсач\obj\x86\Debug\Курсач.Основная_форма.resources
+F:\Курсовая\Курсач12(Готовый)\Курсач\obj\x86\Debug\Курсач.Properties.Resources.resources
+F:\Курсовая\Курсач12(Готовый)\Курсач\obj\x86\Debug\Курсач.Пароль.resources
+F:\Курсовая\Курсач12(Готовый)\Курсач\obj\x86\Debug\Курсач.Приветствие.resources
+F:\Курсовая\Курсач12(Готовый)\Курсач\obj\x86\Debug\Курсач.Создание_записи.resources
+F:\Курсовая\Курсач12(Готовый)\Курсач\obj\x86\Debug\Курсач.Создание_записи1.resources
+F:\Курсовая\Курсач12(Готовый)\Курсач\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\Курсовая\Курсач12(Готовый)\Курсач\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Comp\Рабочий стол\Курсач12(Готовый)\Курсач\bin\Debug\Курсач.exe.config
+C:\Documents and Settings\Comp\Рабочий стол\Курсач12(Готовый)\Курсач\obj\x86\Debug\Курсач.exe
+C:\Documents and Settings\Comp\Рабочий стол\Курсач12(Готовый)\Курсач\obj\x86\Debug\Курсач.pdb
+C:\Documents and Settings\Comp\Рабочий стол\Курсач12(Готовый)\Курсач\bin\Debug\Курсач.exe
+C:\Documents and Settings\Comp\Рабочий стол\Курсач12(Готовый)\Курсач\bin\Debug\Курсач.pdb
+C:\Documents and Settings\Comp\Рабочий стол\Курсач12(Готовый)\Курсач\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Comp\Рабочий стол\Курсач12(Готовый)\Курсач\obj\x86\Debug\Курсач.О_программе.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач12(Готовый)\Курсач\obj\x86\Debug\Курсач.Основная_форма.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач12(Готовый)\Курсач\obj\x86\Debug\Курсач.Properties.Resources.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач12(Готовый)\Курсач\obj\x86\Debug\Курсач.Пароль.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач12(Готовый)\Курсач\obj\x86\Debug\Курсач.Приветствие.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач12(Готовый)\Курсач\obj\x86\Debug\Курсач.Создание_записи.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач12(Готовый)\Курсач\obj\x86\Debug\Курсач.Создание_записи1.resources
+C:\Documents and Settings\Comp\Рабочий стол\Курсач12(Готовый)\Курсач\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Comp\Рабочий стол\Курсач12(Готовый)\Курсач\obj\x86\Debug\GenerateResource.write.1.tlog

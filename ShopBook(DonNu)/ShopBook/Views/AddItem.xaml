@@ -1,0 +1,78 @@
+﻿<Window x:Class="ShopBook.Views.AddItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShopBook.Views"
+        mc:Ignorable="d"
+        Title="Добавление/Удаление записей" Height="408.266" Width="618.596" Icon="img/bookshelf.ico">
+    <Grid>
+        <Image Name="FonW" HorizontalAlignment="Left" Height="358" Margin="0,10,0,0" VerticalAlignment="Top" Width="612" Source="img/witchernew.jpg" Opacity="0.4"/>
+        <ComboBox
+            Style="{StaticResource MaterialDesignOutlinedComboBox}"
+            IsEnabled="{Binding Path=IsChecked, ElementName=OutlinedComboBoxEnabledCheckBox}"
+            materialDesign:HintAssist.Hint="Выбирите Тип"
+            ItemsSource="{Binding ShortStringList}"
+            x:Name="TypeProduct" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="300" SelectionChanged="TypeProduct_SelectionChanged">
+            <ComboBoxItem Content="Книги" HorizontalAlignment="Left" Width="298.4"/>
+            <ComboBoxItem Content="Концелярия" HorizontalAlignment="Left" Width="298.4"/>
+            <ComboBoxItem Content="Журнал" HorizontalAlignment="Left" Width="298.4"/>
+        </ComboBox>
+        <Grid x:Name="GrupBook" Margin="22,53,10,10.4">
+            <Label x:Name="AuthorBookL" Content="Автор" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,58,0,0"/>
+            <Label x:Name="NameBookL" Content="Название" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,30,0,0"/>
+            <TextBox x:Name="NameBookT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Книги" VerticalAlignment="Top" Width="120" Margin="101,30,0,0"/>
+            <TextBox x:Name="AuthorBookT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Автор" VerticalAlignment="Top" Width="120" Margin="101,58,0,0"/>
+            <Label x:Name="MaterialBookL" Content="Материал" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,116,0,0"/>
+            <TextBox x:Name="MaterialBookT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Материал" VerticalAlignment="Top" Width="120" Margin="101,119,0,0"/>
+            <Label x:Name="GenreBookL" Content="Жанр" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,91,0,0"/>
+            <TextBox x:Name="GenreBookT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Жанр" VerticalAlignment="Top" Width="120" Margin="101,92,0,0"/>
+            <Label x:Name="StorageBookL" Content="Место хранения" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,173,0,0"/>
+            <TextBox x:Name="StorageBookT" HorizontalAlignment="Left" Height="23" Margin="101,170,0,0" TextWrapping="Wrap" Text="Склад" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="PriceBookL" Content="Цена" HorizontalAlignment="Left" Margin="0,198,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="PriceBookT" HorizontalAlignment="Left" Height="23" Margin="101,198,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="ManufacturerBookL" Content="Издатель" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,142,0,0"/>
+            <TextBox x:Name="ManufacturerBookT" HorizontalAlignment="Left" Height="23" Margin="101,142,0,0" TextWrapping="Wrap" Text="Издатель" VerticalAlignment="Top" Width="120"/>
+            <Image x:Name="BookIM" HorizontalAlignment="Left" Height="315" Margin="335,0,0,0" VerticalAlignment="Top" Width="245" Source="img/book.png" />
+        </Grid>
+        <Grid x:Name="GrupMagazine" Margin="22,29,0,64.4">
+            <Label x:Name="NameMagazineL" Content="Название" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,54,0,0"/>
+            <TextBox x:Name="NameMagazineT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Журнал" VerticalAlignment="Top" Width="120" Margin="101,54,0,0"/>
+            <Label x:Name="AuthorMagazineL" Content="Автор" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,82,0,0"/>
+            <TextBox x:Name="AuthorMagazineT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Автор" VerticalAlignment="Top" Width="120" Margin="101,82,0,0"/>
+            <Label x:Name="TopicMagazineL" Content="Тема" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,110,0,0"/>
+            <TextBox x:Name="TopicMagazineT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Тема" VerticalAlignment="Top" Width="120" Margin="101,110,0,0"/>
+            <Label x:Name="GenreMagazineL" Content="Жанр" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,168,0,0"/>
+            <TextBox x:Name="GenreMagazineT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Микс" VerticalAlignment="Top" Width="120" Margin="101,168,0,0"/>
+            <Label x:Name="AudienceMagazineL" Content="Аудитория" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,224,0,0"/>
+            <TextBox x:Name="AudienceMagazineT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Дети" VerticalAlignment="Top" Width="120" Margin="101,224,0,0"/>
+            <Label x:Name="PriceMagazineL" Content="Цена" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,252,0,0"/>
+            <TextBox x:Name="PriceMagazineT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="120" Margin="101,252,0,0"/>
+            <Label x:Name="ManufacturerMagazineL" Content="Издатель" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,196,0,0"/>
+            <TextBox x:Name="ManufacturerMagazineT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="1апр" VerticalAlignment="Top" Width="120" Margin="101,196,0,0"/>
+            <Label x:Name="StorageMagazineL" Content="Место хранения" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,138,0,0"/>
+            <TextBox x:Name="StorageMagazineT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Склад" VerticalAlignment="Top" Width="120" Margin="101,138,0,0"/>
+
+            <Image x:Name="MagazineIM" HorizontalAlignment="Center" Height="285" Margin="345,0,0,0" VerticalAlignment="Top" Width="245" Source="img/megazine.jpg" />
+        </Grid>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="129,330,0,0" VerticalAlignment="Top" Width="109" Click="AddDataBase" Height="38"/>
+        <Button x:Name="Delite" Content="Удалить" HorizontalAlignment="Left" Margin="10,330,0,0" VerticalAlignment="Top" Width="114" Click="Delite_Click" Height="38"/>
+        <Button Name="Randome" Content="Сучайное" HorizontalAlignment="Left" Margin="243,330,0,0" VerticalAlignment="Top" Width="109" Click="Randome_Click" Height="38" />
+        <Grid x:Name="GrupСhancellery" Margin="22,10,10,19.4">
+            <Label x:Name="NameСhancelleryL" Content="Название" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,73,0,0"/>
+            <TextBox x:Name="NameСhancelleryT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="101,73,0,0"/>
+            <Label x:Name="StorageСhancelleryL" Content="Место хранения" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,101,0,0"/>
+            <TextBox x:Name="StorageСhancelleryT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="101,101,0,0"/>
+            <Label x:Name="ManufacturerСhancelleryL" Content="Производитель" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,129,0,0"/>
+            <TextBox x:Name="ManufacturerСhancelleryT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="101,129,0,0"/>
+            <Label x:Name="AppointmentСhancelleryL" Content="Категория" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,157,0,0"/>
+            <TextBox x:Name="AppointmentСhancelleryT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="101,157,0,0"/>
+            <Label x:Name="PriceСhancelleryL" Content="Цена" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,185,0,0"/>
+            <TextBox x:Name="PriceСhancelleryT" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="101,185,0,0"/>
+
+            <Image x:Name="СhancelleryIM" HorizontalAlignment="Left" Height="349" Margin="335,0,0,0" VerticalAlignment="Top" Width="245" Source="img/conch.jpg"  />
+
+        </Grid>
+    </Grid>
+</Window>

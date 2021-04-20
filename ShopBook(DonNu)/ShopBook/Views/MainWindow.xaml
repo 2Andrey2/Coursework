@@ -1,0 +1,29 @@
+﻿<Window x:Class="ShopBook.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShopBook"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="526.8" Width="844.4"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}" Icon="img/bookshelf.ico">
+    <Grid>
+        <Button Content="Вход" Margin="282,388,297.4,0" HorizontalContentAlignment="Center" FontSize="48" FontFamily="Times New Roman" FontWeight="Bold" Height="82" VerticalAlignment="Top" Width="259" Click="entrance" BorderBrush="Black" Foreground="#DD000000">
+        </Button>
+        <TextBox Name="LoginT" HorizontalAlignment="Left" Margin="384,232,0,0" TextWrapping="Wrap" Text="viva" VerticalAlignment="Top" FontSize="24" Width="177" SelectionBrush="Black" CaretBrush="White" FontWeight="{DynamicResource {x:Static SystemFonts.MessageFontWeightKey}}"/>
+        <PasswordBox Name="PasswordT" HorizontalAlignment="Left" Margin="384,315,0,0" VerticalAlignment="Top" FontSize="24" Width="177" SelectionBrush="Black" CaretBrush="White" Password="2012"/>
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="246,221,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Times New Roman" Background="{x:Null}" Foreground="#DD000000" FontWeight="Bold"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="246,304,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" FontFamily="Times New Roman"/>
+        <Image HorizontalAlignment="Left" Height="206" Margin="97,10,0,0" VerticalAlignment="Top" Width="647" Source="img/Logo.png"/>
+        <materialDesign:PackIcon Kind="Account" Margin="566,218,0,0" Height="54" Width="54" />
+        <materialDesign:PackIcon Kind="KeyVariant" Height="54" Width="54" Margin="566,304,0,0" />
+        <Button Content="Вход" Margin="282,388,297.4,0" HorizontalContentAlignment="Center" FontSize="48" FontFamily="Times New Roman" FontWeight="Bold" Height="82" VerticalAlignment="Top" Width="259" Click="entrance" />
+    </Grid>
+</Window>
