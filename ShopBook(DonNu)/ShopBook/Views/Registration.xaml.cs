@@ -72,30 +72,22 @@ namespace ShopBook
 
         private void Change_Click(object sender, RoutedEventArgs e)
         {
-            itemClient = null;
-            itemSeller = null;
-            itemModerator = null;
-            itemAdministrator = null;
             string[] mass = null;
             IUserManager user = new UserManager();
             if (position.Text == "Клиент")
             {
-                itemClient = TableClientMain.SelectedItem as CollectionClient;
                 mass = new string[] { itemClient.Логин, itemClient.Пароль };
             }
-            if (position.Text == "Продавцы")
+            if (position.Text == "Продавец")
             {
-                itemSeller = TableClientMain.SelectedItem as CollectionSeller;
                 mass = new string[] { itemSeller.Логин, itemSeller.Пароль };
             }
-            if (position.Text == "Модераторы")
+            if (position.Text == "Модератор")
             {
-                itemModerator = TableClientMain.SelectedItem as CollectionModerator;
                 mass = new string[] { itemModerator.Логин, itemModerator.Пароль };
             }
-            if (position.Text == "Администраторы")
+            if (position.Text == "Администратор")
             {
-                itemAdministrator = TableClientMain.SelectedItem as CollectionAdministrator;
                 mass = new string[] { itemAdministrator.Логин, itemAdministrator.Пароль };
             }
             user.UserAction("Delete", mass);
@@ -148,6 +140,14 @@ namespace ShopBook
 
         private void TableSellerMain_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            itemClient = null;
+            itemSeller = null;
+            itemModerator = null;
+            itemAdministrator = null;
+            if (position.Text == "Клиент") { itemClient = TableClientMain.SelectedItem as CollectionClient; }
+            if (position.Text == "Продавец") { itemSeller = TableSellerMain.SelectedItem as CollectionSeller; }
+            if (position.Text == "Модератор") { itemModerator = TableModeratorMain.SelectedItem as CollectionModerator; }
+            if (position.Text == "Администратор") { itemAdministrator = TableAdministratorMain.SelectedItem as CollectionAdministrator;}
             working.Synchronizing_table_fields(sender, massTextbox, TypePeople);
         }
 

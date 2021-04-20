@@ -130,10 +130,6 @@ namespace ShopBook.Views.Working_form
         }
         public void Synchronizing_table_fields(object sender, TextBox[] mass, ComboBox box)
         {
-            itemClient = null;
-            itemSeller = null;
-            itemModerator = null;
-            itemAdministrator = null;
             DataGrid data = (DataGrid)sender;
             if (data.SelectedIndex != -1)
             {
