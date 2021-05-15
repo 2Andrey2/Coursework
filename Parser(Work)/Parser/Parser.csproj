@@ -64,7 +64,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MainStream.cs" />
+    <Compile Include="NewProducts.xaml.cs">
+      <DependentUpon>NewProducts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProductType.cs" />
+    <Compile Include="ProductWork.cs" />
     <Compile Include="WorkFile.cs" />
+    <Compile Include="WorkString.cs" />
     <Page Include="FileSelection.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -84,6 +91,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="NewProducts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ParserSetup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

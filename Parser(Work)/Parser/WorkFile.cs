@@ -11,23 +11,48 @@ namespace Parser
     {
         string Path;
         string RezPath;
-        WorkFile(string path, string rezpath)
+        StreamReader fileR;
+        StreamWriter fileW;
+        int NamberPage;
+        string Title;
+        public WorkFile(string path, string rezpath, string title)
         {
             Path = path;
             RezPath = rezpath;
+            NamberPage = 1;
+            Title = title;
         }
-        public FileStream[] OpenFile()
+        public StreamReader OpenFile()
         {
-            FileStream fileR = new FileStream(Path, FileMode.Open);
-            FileStream fileW = new FileStream(Path, FileMode.OpenOrCreate);
-            FileStream[] massStream = new FileStream[2];
-            massStream[0] = fileR; massStream[1] = fileW;
-            return massStream;
+            fileR = new StreamReader(Path);
+            fileW = new StreamWriter(RezPath);
+            return fileR;
         }
-        public void CloseFile(FileStream[] massStream)
+        public void CloseFile()
         {
-            massStream[0].Close();
-            massStream[1].Close();;
+            fileR.Close();
+            fileW.Close();;
+        }
+        public string[] ReadFile (int CountLine)
+        {
+            string[] massline = new string[CountLine];
+            for (int i = 0; i < massline.Length; i++)
+            {
+                massline[i] = fileR.ReadLine();
+            }
+            return massline;
+        }
+        public void WriteFile(string[] massline)
+        {
+            for (int i = 0; i < massline.Length; i++)
+            {
+                fileW.WriteLine(massline[i]);
+            }
+        }
+        public void WriteTitle ()
+        {
+            fileW.WriteLine(Title + NamberPage);
+            NamberPage++;
         }
     }
 }
