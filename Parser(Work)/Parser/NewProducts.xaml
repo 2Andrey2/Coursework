@@ -10,18 +10,23 @@
     <Grid>
         <Grid Name="ParamG" Margin="10,10,9.6,63">
             <Label x:Name="ProductTypeL" Content="Тип продукта" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" Margin="10,10,0,0" Height="55" Width="363"/>
-            <TextBox x:Name="ProductTypeT" HorizontalAlignment="Left" Height="55" Margin="412,10,0,0" TextWrapping="Wrap" Text="Название продукта" VerticalAlignment="Top" Width="352" FontSize="25"/>
+            <TextBox x:Name="ProductTypeT" HorizontalAlignment="Left" Height="55" Margin="419,10,0,0" TextWrapping="Wrap" Text="Название продукта" VerticalAlignment="Top" Width="345" FontSize="25"/>
             <Label x:Name="NumberLinesL" Content="Укажите количество строк:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" Margin="10,72,0,0" Width="363"/>
             <TextBox x:Name="NumberLinesT" HorizontalAlignment="Left" Height="42" Margin="418,72,0,0" TextWrapping="Wrap" Text="Кол-во строк" VerticalAlignment="Top" Width="352" FontSize="25"/>
             <Label x:Name="MainColumnsL" Content="Укажите количество столбцов:" HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top" FontSize="25" Width="363"/>
             <TextBox x:Name="MainColumnsT" HorizontalAlignment="Left" Height="42" Margin="419,120,0,0" TextWrapping="Wrap" Text="Кол-во столбцов" VerticalAlignment="Top" Width="351" FontSize="25"/>
             <Label x:Name ="PathRezL" Content="Путь к результату" HorizontalAlignment="Left" Margin="10,166,0,0" VerticalAlignment="Top" FontSize="25" Width="363"/>
-            <TextBox x:Name ="PathRezT" Height="42" Margin="419,167,0,0" TextWrapping="Wrap" Text="C:\Users\Andrey\Desktop\work\MyRez.ini" VerticalAlignment="Top" FontSize="25" HorizontalAlignment="Left" Width="351"/>
+            <TextBox x:Name ="PathRezT" Height="42" Margin="419,167,0,0" TextWrapping="Wrap" Text="C:\Users\Andrey\Desktop\work\MyRez.ini" VerticalAlignment="Top" FontSize="25" HorizontalAlignment="Left" Width="282"/>
+            <Button Style="{StaticResource MaterialDesignFloatingActionButton}" ToolTip="MaterialDesignFloatingActionButton" Margin="0,166,10,0" Width="58" Height="43" Click="Button_Click" HorizontalAlignment="Right" VerticalAlignment="Top" >
+                <materialDesign:PackIcon Kind="FolderOpen" Height="43" Width="44"/>
+            </Button>
             <Label x:Name ="FormattingL" Content="Укажите отступы" HorizontalAlignment="Left" Margin="10,260,0,0" VerticalAlignment="Top" FontSize="25" Width="363"/>
             <TextBox x:Name ="FormattingT" Height="77" Margin="419,260,0,0" TextWrapping="Wrap" Text="Отступы между столбцами вида(1;3;1;3)" VerticalAlignment="Top" FontSize="25" HorizontalAlignment="Left" Width="351"/>
             <Label x:Name ="TitleL" Content="Заголовки блоков" HorizontalAlignment="Left" Margin="10,213,0,0" VerticalAlignment="Top" FontSize="25" Width="363"/>
             <TextBox x:Name ="TitleT" Height="42" Margin="419,213,0,0" TextWrapping="Wrap" Text="Заголовок блоков" VerticalAlignment="Top" FontSize="25" HorizontalAlignment="Left" Width="351"/>
         </Grid>
-        <Button Content="Создать" HorizontalAlignment="Left" Margin="10,357,0,0" VerticalAlignment="Top" Width="138" Height="53" Click="Button_Click"/>
+        <Button Name ="ProductCreationB" Content="Создать" HorizontalAlignment="Left" Margin="10,357,0,0" VerticalAlignment="Top" Width="138" Height="53" Click="ProductCreationB_Click"/>
+        <Button Name ="ProductRemovingB" Content="Удалить" HorizontalAlignment="Left" Margin="10,357,0,0" VerticalAlignment="Top" Width="138" Height="53" Click="ProductRemovingB_Click" />
+        <CheckBox Name="PresenceHeaders" Content="Наличие заголовков" Margin="0,357,9.6,0" VerticalAlignment="Top" Height="53" FontSize="30" HorizontalAlignment="Right" Width="355"/>
     </Grid>
 </Window>

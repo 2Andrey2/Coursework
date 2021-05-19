@@ -13,22 +13,17 @@ namespace Parser
     {
         int countLine;
         int countColumns;
-        string[,] mainmass;
-        string[] finmass;
         string[] formatlong;
         static object lockerW = new object();
-        static object lockerT1 = new object();
-        static object lockerT2 = new object();
-        static object lockerT3 = new object();
         public WorkString(string formatting, int CountLine, int CountColumns)
         {
             countLine = CountLine;
             countColumns = CountColumns;
             formatlong = formatting.Split(';');
-            mainmass = new string[countLine, countColumns];
         }
         public void BuildingBlock(string[] massline, WorkFile file, ParserSetup parser)
         {
+            string[,] mainmass = new string[countLine, countColumns];
             int LineNumber = 0;
             int ColumnNumber = 0;
             try
@@ -38,7 +33,7 @@ namespace Parser
                 {
                     if (ColumnNumber != Convert.ToInt32(countColumns))
                     {
-                        StringConversion(massline[i], LineNumber, ColumnNumber);
+                        StringConversion(massline[i], LineNumber, ColumnNumber, mainmass);
                         if (LineNumber == Convert.ToInt32(countLine) - 1)
                         {
                             LineNumber = 0;
@@ -55,7 +50,8 @@ namespace Parser
                         ColumnNumber = 0;
                     }
                 }
-                finmass = new string[mainmass.GetLength(0)];
+
+                string[] finmass = new string[mainmass.GetLength(0)];
                 for (int j = 0; j < mainmass.GetLength(0); j++)
                 {
                     for (int z = 0; z < mainmass.GetLength(1); z++)
@@ -80,11 +76,11 @@ namespace Parser
                 MessageBox.Show(ex.Message, ex.StackTrace);
             }
         }
-        private void StringConversion(string text, int LineNumber, int ColumnNumber)
+        private void StringConversion(string text, int LineNumber, int ColumnNumber, string[,] mainmass)
         {
             string rez = "";
             string[] masstext = PartitioningColumns(text);
-            if (masstext.Length == formatlong.Length)
+            if (masstext.Length == formatlong.Length || masstext.Length == 0)
             {
                 for (int i = 0; i < masstext.Length; i++)
                 {

@@ -13,7 +13,7 @@
         <Button x:Name="FileSelectionB"
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="Выбрать файл для обработки" Margin="0,0,221,178.6" FontSize="40" Height="110" Click="FileSelectionB_Click" HorizontalAlignment="Right" Width="364" VerticalAlignment="Bottom">
+            ToolTip="Выбрать файл для обработки" Margin="211,158,225,181.6" FontSize="40" Height="Auto" Click="FileSelectionB_Click" HorizontalContentAlignment="Center">
             <TextBlock
               Text="Файл" />
         </Button>

@@ -11,26 +11,14 @@ namespace Parser
 {
     class MainStream
     {
-        string Path;
-        int CountLine;
-        int CountColumns;
-        string PathRez;
-        string Title;
-        string Formatting;
-        ParserSetup Parser;
-        public MainStream (string path, int NumberLines, int MainColumns, string pathRez, string title, string formatting, ParserSetup parser)
+        ParserSettings settings;
+        public MainStream (ParserSettings parserSettings)
         {
-            Path = path;
-            CountLine = NumberLines;
-            CountColumns = MainColumns;
-            PathRez = pathRez;
-            Title = title;
-            Formatting = formatting;
-            Parser = parser;
+            settings = parserSettings;
         }
         public void RumWork ()
         {
-            WorkFile workFile = new WorkFile(Path, PathRez, Title);
+            WorkFile workFile = new WorkFile(settings.Path, settings.PathRez, settings.Title);
             Task[] masstask = new Task[3];
             try
             {
@@ -38,11 +26,15 @@ namespace Parser
                 WorkString[] massstring = new WorkString[masstask.Length];
                 int i = 0;
                 int j = 0;
-                while ((fileR.ReadLine()) != null)
+                while (true)
                 {
-                    massstring[i] = new WorkString(Formatting, CountLine, CountColumns);
-                    string[] line = workFile.ReadFile(CountLine * CountColumns);
-                    masstask[i] = new Task(() => massstring[i].BuildingBlock(line, workFile, Parser));
+                    massstring[i] = new WorkString(settings.Formatting, settings.CountLine, settings.CountColumns);
+                    string[] line = workFile.ReadFile(settings.CountLine * settings.CountColumns, settings.TitleBlok);
+                    if (line[0] == null)
+                    {
+                        break;
+                    }
+                    masstask[i] = new Task(() => massstring[i].BuildingBlock(line, workFile, settings.Parser));
                     masstask[i].Start();
                     if (masstask.Any(x => x == null) == false)
                     {

@@ -31,10 +31,14 @@ namespace Parser
         public void CloseFile()
         {
             fileR.Close();
-            fileW.Close();;
+            fileW.Close();
         }
-        public string[] ReadFile (int CountLine)
+        public string[] ReadFile (int CountLine, bool Title)
         {
+            if (Title == true)
+            {
+                fileR.ReadLine();
+            }
             string[] massline = new string[CountLine];
             for (int i = 0; i < massline.Length; i++)
             {
