@@ -18,11 +18,20 @@ namespace Parser
         }
         public void RumWork ()
         {
-            WorkFile workFile = new WorkFile(settings.Path, settings.PathRez, settings.Title);
+            int allblok = 0;
+            if (settings.TitleBlok == true)
+            {
+                allblok = System.IO.File.ReadAllLines(settings.Path).Length / (settings.CountLine * settings.CountColumns + 1);
+            }
+            else
+            {
+                allblok = System.IO.File.ReadAllLines(settings.Path).Length / (settings.CountLine * settings.CountColumns);
+            }
+            WorkFile workFile = new WorkFile(settings.Path, settings.PathRez, settings.Title, settings.Pack, allblok);
             Task[] masstask = new Task[3];
             try
             {
-                StreamReader fileR = workFile.OpenFile();
+                StreamReader fileR = workFile.OpenFilePath();
                 WorkString[] massstring = new WorkString[masstask.Length];
                 int i = 0;
                 int j = 0;

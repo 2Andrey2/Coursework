@@ -67,20 +67,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MainStream.cs" />
-    <Compile Include="NewProducts.xaml.cs">
+    <Compile Include="Views\Search.xaml.cs">
+      <DependentUpon>Search.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\MainStream.cs" />
+    <Compile Include="Views\NewProducts.xaml.cs">
       <DependentUpon>NewProducts.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ParserSettings.cs" />
-    <Compile Include="ProductType.cs" />
-    <Compile Include="ProductWork.cs" />
-    <Compile Include="WorkFile.cs" />
-    <Compile Include="WorkString.cs" />
-    <Page Include="FileSelection.xaml">
+    <Compile Include="Entities\ParserSettings.cs" />
+    <Compile Include="Entities\ProductType.cs" />
+    <Compile Include="Services\ProductWork.cs" />
+    <Compile Include="Data\WorkFile.cs" />
+    <Compile Include="Services\WorkString.cs" />
+    <Compile Include="Views\WorkingView.cs" />
+    <Page Include="Views\Search.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Views\FileSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -88,24 +96,24 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="FileSelection.xaml.cs">
+    <Compile Include="Views\FileSelection.xaml.cs">
       <DependentUpon>FileSelection.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="NewProducts.xaml">
+    <Page Include="Views\NewProducts.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ParserSetup.xaml">
+    <Page Include="Views\ParserSetup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ParserSetup.xaml.cs">
+    <Compile Include="Views\ParserSetup.xaml.cs">
       <DependentUpon>ParserSetup.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -134,6 +142,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

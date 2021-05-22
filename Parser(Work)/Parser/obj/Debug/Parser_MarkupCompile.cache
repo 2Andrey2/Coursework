@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\App.xaml
-4826478785
+5465914438
 
-131730176828
+161094668426
 17-1438149439
-FileSelection.xaml;MainWindow.xaml;NewProducts.xaml;ParserSetup.xaml;
+Views\Search.xaml;Views\FileSelection.xaml;Views\MainWindow.xaml;Views\NewProducts.xaml;Views\ParserSetup.xaml;
 
 False
 

@@ -15,18 +15,40 @@ namespace Parser
         StreamWriter fileW;
         int NamberPage;
         string Title;
-        public WorkFile(string path, string rezpath, string title)
+        int Pack;
+        int NumberPack;
+        int AllBlok;
+        int AllPage;
+        public WorkFile(string path, string rezpath, string title, int pack, int allblok)
         {
             Path = path;
             RezPath = rezpath;
             NamberPage = 1;
             Title = title;
+            Pack = pack;
+            NumberPack = 1;
+            AllBlok = allblok;
+            AllPage = 1;
         }
-        public StreamReader OpenFile()
+        public WorkFile(string path, string rezpath)
+        {
+            Path = path;
+            RezPath = rezpath;
+        }
+        public StreamReader OpenFilePath()
         {
             fileR = new StreamReader(Path);
             fileW = new StreamWriter(RezPath);
             return fileR;
+        }
+        public StreamReader OpenFileRezPath()
+        {
+            fileR = new StreamReader(RezPath);
+            return fileR;
+        }
+        public void CloseFileRezPath()
+        {
+            fileR.Close();
         }
         public void CloseFile()
         {
@@ -55,8 +77,18 @@ namespace Parser
         }
         public void WriteTitle ()
         {
-            fileW.WriteLine(Title + NamberPage);
+            AllPage++;
+            if (AllBlok / Pack < NumberPack)
+            {
+                Pack = AllBlok - AllPage;
+            }
+            fileW.WriteLine(Title + "   [" + NamberPage + "/" + Pack + "]" + " " + NumberPack + " All:" + AllPage);
             NamberPage++;
+            if (NamberPage > Pack)
+            {
+                NamberPage = 1;
+                NumberPack++;
+            }
         }
     }
 }

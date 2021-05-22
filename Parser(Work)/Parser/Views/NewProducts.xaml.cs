@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Parser.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,6 +22,7 @@ namespace Parser
     /// </summary>
     public partial class NewProducts : Window
     {
+        WorkingView view = new WorkingView();
         public NewProducts(string Action)
         {
             InitializeComponent();
@@ -27,16 +30,22 @@ namespace Parser
             {
                 ProductCreationB.Visibility = Visibility.Visible;
                 ProductRemovingB.Visibility = Visibility.Collapsed;
+                GrupCreate.IsEnabled = true;
             }
             if(Action == "Deletion")
             {
                 ProductCreationB.Visibility = Visibility.Collapsed;
                 ProductRemovingB.Visibility = Visibility.Visible;
+                GrupCreate.IsEnabled = false;
             }
         }
         private void ProductCreationB_Click(object sender, RoutedEventArgs e)
         {
-            string[] info = new string[] { ProductTypeT.Text, NumberLinesT.Text, MainColumnsT.Text, PathRezT.Text, TitleT.Text, FormattingT.Text, Convert.ToString(PresenceHeaders.IsChecked) };
+            if(DataChecking() == false)
+            {
+                return;
+            }
+            string[] info = new string[] { ProductTypeT.Text, NumberLinesT.Text, MainColumnsT.Text, PathRezT.Text, TitleT.Text, FormattingT.Text, Convert.ToString(PresenceHeaders.IsChecked), PackT.Text };
             ProductType product = new ProductType();
             ProductWork work = new ProductWork();
             product.infowrite(info);
@@ -58,9 +67,28 @@ namespace Parser
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            FolderBrowserDialog dialog = new FolderBrowserDialog();
-            dialog.ShowDialog();
-            PathRezT.Text = dialog.SelectedPath;
+            PathRezT.Text = view.FolderSelection();
+        }
+        private bool DataChecking()
+        {
+            try
+            {
+                Regex regex = new Regex(@"^(\d;)+");
+                Convert.ToInt32(NumberLinesT.Text);
+                Convert.ToInt32(MainColumnsT.Text);
+                Convert.ToInt32(PackT.Text);
+                MatchCollection matches = regex.Matches(FormattingT.Text);
+                if (matches.Count == 0)
+                {
+                    throw new Exception("Пробелы введены не верно");
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message, ex.StackTrace);
+                return false;
+            }
         }
     }
 }

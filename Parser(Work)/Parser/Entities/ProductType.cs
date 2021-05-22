@@ -15,6 +15,7 @@ namespace Parser
         public string Title;
         public string Formatting;
         public bool PresenceHeaders;
+        public int Pack;
         public void infowrite(string[] info)
         {
             NameProduct = info[0];
@@ -24,6 +25,7 @@ namespace Parser
             Title = info[4];
             Formatting = info[5];
             PresenceHeaders = Convert.ToBoolean(info[6]);
+            Pack = Convert.ToInt32(info[7]);
         }
     }
 }

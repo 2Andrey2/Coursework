@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Parser
 {
-    class ParserSettings
+    public class ParserSettings
     {
         public string Path;
         public int CountLine;
@@ -16,7 +16,8 @@ namespace Parser
         public string Formatting;
         public bool TitleBlok;
         public ParserSetup Parser;
-        public ParserSettings(string path, int NumberLines, int MainColumns, string pathRez, string title, string formatting, ParserSetup parser, bool titleblok)
+        public int Pack;
+        public ParserSettings(string path, int NumberLines, int MainColumns, string pathRez, string title, string formatting, ParserSetup parser, bool titleblok, int pack)
         {
             Path = path;
             CountLine = NumberLines;
@@ -26,6 +27,7 @@ namespace Parser
             Formatting = formatting;
             Parser = parser;
             TitleBlok = titleblok;
+            Pack = pack;
         }
     }
 }
