@@ -10,7 +10,7 @@ namespace Parser
     class WorkFile
     {
         string Path;
-        string RezPath;
+        public string RezPath;
         StreamReader fileR;
         StreamWriter fileW;
         int NamberPage;
@@ -28,7 +28,6 @@ namespace Parser
             Pack = pack;
             NumberPack = 1;
             AllBlok = allblok;
-            AllPage = 1;
         }
         public WorkFile(string path, string rezpath)
         {
@@ -41,12 +40,12 @@ namespace Parser
             fileW = new StreamWriter(RezPath);
             return fileR;
         }
-        public StreamReader OpenFileRezPath()
+        public StreamReader ReaderRezPathOpen()
         {
             fileR = new StreamReader(RezPath);
             return fileR;
         }
-        public void CloseFileRezPath()
+        public void ReaderRezPathClose()
         {
             fileR.Close();
         }
@@ -75,13 +74,13 @@ namespace Parser
                 fileW.WriteLine(massline[i]);
             }
         }
-        public void WriteTitle ()
+        public void WriteTitle()
         {
-            AllPage++;
             if (AllBlok / Pack < NumberPack)
             {
                 Pack = AllBlok - AllPage;
             }
+            AllPage++;
             fileW.WriteLine(Title + "   [" + NamberPage + "/" + Pack + "]" + " " + NumberPack + " All:" + AllPage);
             NamberPage++;
             if (NamberPage > Pack)

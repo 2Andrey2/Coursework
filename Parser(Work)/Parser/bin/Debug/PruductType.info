@@ -1,1 +1,3 @@
-{"NameProduct":"Product1","CountLine":20,"CountColumns":2,"PathRez":"C:\\Users\\Andrey\\Desktop\\work\\rez","Title":"Title","Formatting":"1;3;1;3","PresenceHeaders":true,"Pack":100}
+{"NameProduct":"Product1","CountLine":20,"CountColumns":2,"PathRez":"C:\\Users\\Andrey\\Desktop\\work\\rez","Title":"Title","Formatting":"1;3;1;3","PresenceHeaders":true,"Pack":150}
+{"NameProduct":"Product2","CountLine":20,"CountColumns":6,"PathRez":"C:\\Users\\Andrey\\Desktop\\work\\rez","Title":"Titlenew","Formatting":"1;3","PresenceHeaders":true,"Pack":100}
+{"NameProduct":"Product3","CountLine":3,"CountColumns":3,"PathRez":"C:\\Users\\Andrey\\Desktop\\work\\rez","Title":"Titleold","Formatting":"1;3","PresenceHeaders":false,"Pack":200}

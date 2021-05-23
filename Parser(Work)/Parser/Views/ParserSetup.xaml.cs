@@ -38,15 +38,19 @@ namespace Parser
 
         private void ProductComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string[] rezmass = view.FillingTypes(e);
-            NumberLinesT.Text = rezmass[0];
-            MainColumnsT.Text = rezmass[1];
-            PathRezT.Text = rezmass[2];
-            TitleT.Text = rezmass[3];
-            FormattingT.Text = rezmass[4];
-            PresenceHeaders.IsChecked = Convert.ToBoolean(rezmass[5]);
-            PackT.Text = rezmass[6];
-            ParamG.IsEnabled = true;
+            try
+            {
+                string[] rezmass = view.FillingTypes(e);
+                NumberLinesT.Text = rezmass[0];
+                MainColumnsT.Text = rezmass[1];
+                PathRezT.Text = rezmass[2];
+                TitleT.Text = rezmass[3];
+                FormattingT.Text = rezmass[4];
+                PresenceHeaders.IsChecked = Convert.ToBoolean(rezmass[5]);
+                PackT.Text = rezmass[6];
+                ParamG.IsEnabled = true;
+            }
+            catch { }
         }
 
         private void AddItem_Click(object sender, RoutedEventArgs e)

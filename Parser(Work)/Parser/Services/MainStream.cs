@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Parser.Services;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,11 +22,16 @@ namespace Parser
             int allblok = 0;
             if (settings.TitleBlok == true)
             {
-                allblok = System.IO.File.ReadAllLines(settings.Path).Length / (settings.CountLine * settings.CountColumns + 1);
+                allblok = System.IO.File.ReadAllLines(settings.Path).Length / (settings.CountLine * settings.CountColumns+1);
             }
             else
             {
                 allblok = System.IO.File.ReadAllLines(settings.Path).Length / (settings.CountLine * settings.CountColumns);
+            }
+            ChecksFile checksFile = new ChecksFile();
+            if (checksFile.CheckingDuplicates(settings.Path) == true)
+            {
+                return;
             }
             WorkFile workFile = new WorkFile(settings.Path, settings.PathRez, settings.Title, settings.Pack, allblok);
             Task[] masstask = new Task[3];

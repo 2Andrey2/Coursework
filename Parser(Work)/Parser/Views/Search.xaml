@@ -30,17 +30,17 @@
             x:Name="CheckBoxBox"
             IsThreeState="False"
             IsChecked="false"
-            Content="Посик по коробкам" Margin="10,133,567,411.8" FontSize="20"/>
+            Content="Посик по коробкам" Margin="10,133,0,0" FontSize="20" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="207"/>
         <CheckBox
             x:Name="CheckBoxAllline"
             IsThreeState="False"
             IsChecked="false"
-            Content="Посик по номеру" Margin="10,174,567,370.8" FontSize="20"/>
+            Content="Посик по номеру" Margin="10,174,0,0" FontSize="20" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="207"/>
         <CheckBox
             x:Name="CheckBoxline"
             IsThreeState="False"
             IsChecked="false"
-            Content="Посик по строкам" Margin="10,218,567,326.8" FontSize="20"/>
+            Content="Посик по строкам" Margin="10,218,0,0" FontSize="20" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="207"/>
         <Button x:Name="SearchB"
             Style="{StaticResource MaterialDesignFlatDarkBgButton}"
             ToolTip="Выполняет форматирование файла"

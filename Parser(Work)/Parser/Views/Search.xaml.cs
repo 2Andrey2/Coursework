@@ -38,7 +38,7 @@ namespace Parser
             string tempreg;
             if (CheckBoxBox.IsChecked == true)
             {
-                tempreg = @"\[" + NumberT.Text + @"/(\d+)\] " + BoxT.Text;
+                tempreg = @"\[" + NumberT.Text + @"/(\d+)\] " + BoxT.Text + " ";
                 filtre = new Regex(tempreg);
             }
             if (CheckBoxAllline.IsChecked == true)
@@ -68,7 +68,7 @@ namespace Parser
             string[] massrez = new string[Settings.CountLine * Settings.CountColumns + 1];
             WorkFile workFile = new WorkFile(Settings.Path, Settings.PathRez);
             int fulllines = System.IO.File.ReadAllLines(Settings.Path).Length;
-            StreamReader fileR = workFile.OpenFileRezPath();
+            StreamReader fileR = workFile.ReaderRezPathOpen();
             while (true)
             {
                 string temp = fileR.ReadLine();
@@ -86,7 +86,7 @@ namespace Parser
                     }
                 }
             }
-            workFile.CloseFileRezPath();
+            workFile.ReaderRezPathClose();
             return massrez;
         }
 
@@ -94,13 +94,16 @@ namespace Parser
         {
             view.UpdatingTypes(ProductComboBox);
         }
-
+        int flag = 0;
         private void ProductComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string[] rezmass = view.FillingTypes(e);
             Settings.CountLine = Convert.ToInt32(rezmass[0]);
             Settings.CountColumns = Convert.ToInt32(rezmass[1]);
-            Settings.PathRez = rezmass[2];
+            if (flag == 0)
+            {
+                Settings.PathRez = rezmass[2];
+            }
             Settings.Title = rezmass[3];
             Settings.Formatting = rezmass[4];
             Settings.TitleBlok = Convert.ToBoolean(rezmass[5]);
@@ -110,6 +113,8 @@ namespace Parser
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Settings.PathRez = view.FileSelection();
+            PathSearchT.Text = Settings.PathRez;
+            flag = 1;
         }
     }
 }
