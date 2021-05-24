@@ -1,0 +1,36 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Parser.Views"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Parser.Views.Administration"
+        mc:Ignorable="d"
+        Title="Administration" Height="348.133" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <TextBox x:Name="nameT" HorizontalAlignment="Left" Height="31" Margin="127,10,0,0" TextWrapping="Wrap" Text="Андрей" VerticalAlignment="Top" Width="213" FontSize="17"/>
+        <TextBox x:Name="SurnameT" HorizontalAlignment="Left" Height="32" Margin="127,46,0,0" TextWrapping="Wrap" Text="Васильянов" VerticalAlignment="Top" Width="213" FontSize="17"/>
+        <TextBox x:Name="middleNameT" HorizontalAlignment="Left" Height="32" Margin="127,83,0,0" TextWrapping="Wrap" Text="Игоревич" VerticalAlignment="Top" Width="213" FontSize="17"/>
+        <Label x:Name="nameL" Content="Имя" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="20" Height="31" Width="112" FontWeight="Bold" FontFamily="Times New Roman" Background="{x:Null}"/>
+        <Label x:Name="SurnameL" Content="Фамилия" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" FontSize="20" Height="32" Width="112" FontWeight="Bold" FontFamily="Times New Roman" Background="{x:Null}"/>
+        <Label x:Name="middleNameL" Content="Отчество" HorizontalAlignment="Left" Margin="10,83,0,0" VerticalAlignment="Top" FontSize="20" Height="32" Width="112" FontWeight="Bold" FontFamily="Times New Roman" Background="{x:Null}"/>
+        <Label x:Name="telephoneL" Content="Телефон" HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top" FontSize="20" Height="32" Width="112" FontWeight="Bold" FontFamily="Times New Roman" Background="{x:Null}"/>
+        <TextBox x:Name="telephoneT" HorizontalAlignment="Left" Height="32" Margin="127,120,0,0" TextWrapping="Wrap" Text="0715555555" VerticalAlignment="Top" Width="213" FontSize="17"/>
+        <Label Content="Должность" HorizontalAlignment="Left" Margin="10,231,0,0" VerticalAlignment="Top" FontSize="20" Height="32" Width="112" FontWeight="Bold" FontFamily="Times New Roman" Background="{x:Null}"/>
+        <ComboBox
+            x:Name="position" HorizontalAlignment="Left" Margin="127,231,0,0" VerticalAlignment="Top" Width="213" Height="32" FontSize="17">
+            <ComboBoxItem Tag="K" IsSelected="True" Content="Работник"/>
+            <ComboBoxItem Tag="A" Content="Администратор"/>
+        </ComboBox>
+        <Label x:Name="LoginL" Content="Логин" HorizontalAlignment="Left" Margin="10,157,0,0" VerticalAlignment="Top" FontSize="20" Height="32" Width="112" FontWeight="Bold" FontFamily="Times New Roman" Background="{x:Null}"/>
+        <Label x:Name="PasswordL" Content="Пароль" HorizontalAlignment="Left" Margin="10,194,0,0" VerticalAlignment="Top" FontSize="20" Height="32" Width="112" FontWeight="Bold" FontFamily="Times New Roman" Background="{x:Null}"/>
+        <TextBox x:Name="LoginT" HorizontalAlignment="Left" Height="32" Margin="127,157,0,0" TextWrapping="Wrap" Text="viva" VerticalAlignment="Top" Width="213" FontSize="17"/>
+        <TextBox x:Name="PasswordT" HorizontalAlignment="Left" Height="32" Margin="127,194,0,0" TextWrapping="Wrap" Text="2012" VerticalAlignment="Top" Width="213" FontSize="17"/>
+
+        <DataGrid x:Name="TableUserMain" Margin="345,10,9.6,0" Height="253" VerticalAlignment="Top" SelectionChanged="TableUserMain_SelectionChanged"/>
+        <Button x:Name ="Further" Content="Зарегистрировать" Margin="10,268,0,0" Height="44" FontSize="20" FontFamily="Times New Roman" FontWeight="Bold" HorizontalAlignment="Left" Width="207" VerticalAlignment="Top" Click="Further_Click"/>
+        <Button x:Name ="Delete" Content="Удалить" Margin="222,268,0,0" Height="44"  FontSize="20" FontFamily="Times New Roman" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Left" Width="130" Click="Delete_Click"/>
+        <Button x:Name ="Refresh" Content="Обновить" Margin="357,268,0,0" Height="44" FontSize="20" FontFamily="Times New Roman" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Left" Width="131" Click="Refresh_Click"/>
+        <Button x:Name ="LogB" Content="Лог" Margin="493,268,0,0" VerticalAlignment="Top" Height="44" FontSize="20" FontFamily="Times New Roman" FontWeight="Bold" HorizontalAlignment="Left" Width="88" Click="LogB_Click"/>
+    </Grid>
+</Window>

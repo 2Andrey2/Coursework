@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Parser.Entities
+{
+    [Serializable]
+    class User
+    {
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string MiddleName { get; set; }
+        public string Telephone { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
+        public string Position { get; set; }
+        public User(string[] massdata)
+        {
+            Name = massdata[0];
+            Surname = massdata[1];
+            MiddleName = massdata[2];
+            Telephone = massdata[3];
+            Login = massdata[4];
+            Password = massdata[5];
+            Position = massdata[6];
+        }
+    }
+}

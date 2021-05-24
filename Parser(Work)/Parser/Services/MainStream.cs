@@ -10,31 +10,17 @@ using static Parser.ParserSetup;
 
 namespace Parser
 {
-    class MainStream
+    class MainStream: MainStream_dop
     {
-        ParserSettings settings;
-        public MainStream (ParserSettings parserSettings)
+        public MainStream(ParserSettings parserSettings) : base (parserSettings)
         {
-            settings = parserSettings;
+
         }
         public void RumWork ()
         {
-            int allblok = 0;
-            if (settings.TitleBlok == true)
-            {
-                allblok = System.IO.File.ReadAllLines(settings.Path).Length / (settings.CountLine * settings.CountColumns+1);
-            }
-            else
-            {
-                allblok = System.IO.File.ReadAllLines(settings.Path).Length / (settings.CountLine * settings.CountColumns);
-            }
-            ChecksFile checksFile = new ChecksFile();
-            if (checksFile.CheckingDuplicates(settings.Path) == true)
-            {
-                return;
-            }
-            WorkFile workFile = new WorkFile(settings.Path, settings.PathRez, settings.Title, settings.Pack, allblok);
-            Task[] masstask = new Task[3];
+            if (RunDataChecks() == true) { return; }
+            WorkFile workFile = new WorkFile(settings.Path, settings.PathRez, settings.Title, settings.Pack, GetNumberBlocks());
+            Task[] masstask = new Task[3]; // Ссколько будет использоваться потоков, пока синхронизиции нет 3
             try
             {
                 StreamReader fileR = workFile.OpenFilePath();

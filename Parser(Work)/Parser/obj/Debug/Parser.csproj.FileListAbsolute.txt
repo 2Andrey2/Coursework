@@ -56,3 +56,7 @@ C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\obj\Debug\V
 C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\obj\Debug\Views\MainWindow.baml
 C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\obj\Debug\Views\NewProducts.baml
 C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\obj\Debug\Views\ParserSetup.baml
+C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\obj\Debug\Views\Administration.g.cs
+C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\obj\Debug\Views\Authorization.g.cs
+C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\obj\Debug\Views\Administration.baml
+C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\obj\Debug\Views\Authorization.baml

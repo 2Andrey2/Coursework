@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Parser"
         mc:Ignorable="d"
-        Title="Search" Height="606" Width="790" Loaded="Window_Loaded">
+        Title="Search" Height="606" Width="799.6" Loaded="Window_Loaded">
     <Grid>
         <TextBox Name="SearchResultsT"
             Style="{StaticResource MaterialDesignOutlinedTextBox}"
@@ -44,7 +44,7 @@
         <Button x:Name="SearchB"
             Style="{StaticResource MaterialDesignFlatDarkBgButton}"
             ToolTip="Выполняет форматирование файла"
-            Content="Поиск" Margin="0,255,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="767" Click="SearchB_Click"/>
+            Content="Поиск" Margin="0,255,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="777" Click="SearchB_Click"/>
         <Label x:Name="ProductTypeT" Content="Тип продукта" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" Height="61" Width="174" Margin="10,10,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <ComboBox
             x:Name="ProductComboBox"
