@@ -28,8 +28,8 @@ namespace Parser.Services
         }
         protected bool RunDataChecks()
         {
-            ChecksFile checksFile = new ChecksFile();
-            if (checksFile.CheckingDuplicates(settings.Path) == true)
+            ChecksFile checksFile = new ChecksFile(settings.Path, settings.NumberLength);
+            if (checksFile.RunningChecks(settings.TitleBlok, settings.CountLine * settings.CountColumns) == true)
             {
                 return true;
             }

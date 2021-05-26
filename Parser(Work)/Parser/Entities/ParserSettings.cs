@@ -17,7 +17,8 @@ namespace Parser
         public bool TitleBlok;
         public ParserSetup Parser;
         public int Pack;
-        public ParserSettings(string path, int NumberLines, int MainColumns, string pathRez, string title, string formatting, ParserSetup parser, bool titleblok, int pack)
+        public int NumberLength;
+        public ParserSettings(string path, int NumberLines, int MainColumns, string pathRez, string title, string formatting, ParserSetup parser, bool titleblok, int pack, int numberLength)
         {
             Path = path;
             CountLine = NumberLines;
@@ -28,6 +29,7 @@ namespace Parser
             Parser = parser;
             TitleBlok = titleblok;
             Pack = pack;
+            NumberLength = numberLength;
         }
     }
 }

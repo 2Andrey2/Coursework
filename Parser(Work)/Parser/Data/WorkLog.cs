@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Parser.Entities;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Parser.Data
 {
@@ -14,21 +16,22 @@ namespace Parser.Data
         {
             Path = path;
         }
-        public void WriteFile(string[] linemass)
+        public void WriteFile(RecordingLog[] linemass)
         {
             FileStream streamW = new FileStream(Path, FileMode.Create, FileAccess.Write);
             Encryption.File_encryption_object(streamW, Data.Byte.ObjectToByteArray(linemass));
             streamW.Close();
         }
-        public string[] ReadFile()
+        public RecordingLog[] ReadFile()
         {
-            FileStream streamR = new FileStream("UserFile.user", FileMode.OpenOrCreate, FileAccess.Read);
+            FileStream streamR = new FileStream(Path, FileMode.OpenOrCreate, FileAccess.Read);
             if (streamR.Length == 0)
             {
                 streamR.Close();
-                throw new Exception("not");
+                MessageBox.Show("Лог пуст");
+                return null;
             }
-            string[] rezmass = (string[])Data.Byte.ByteArrayToObject(Encryption.File_decryption_object(streamR));
+            RecordingLog[] rezmass = (RecordingLog[])Data.Byte.ByteArrayToObject(Encryption.File_decryption_object(streamR));
             streamR.Close();
             return rezmass;
         }

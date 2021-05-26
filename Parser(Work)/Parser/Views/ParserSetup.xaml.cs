@@ -1,4 +1,6 @@
-﻿using Parser.Views;
+﻿using Parser.Entities;
+using Parser.Services;
+using Parser.Views;
 using System;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +25,8 @@ namespace Parser
         }
         private void Run_Click(object sender, RoutedEventArgs e)
         {
+            LogMenager log = new LogMenager();
+            log.CreateRecord(new string[] { "Создание отчета: " + ProductComboBox.Text + ", " + Path, " Выполнил: " + ActiveUser.user.Name + " " + ActiveUser.user.Surname + " "});
             ProgressB.Value = 0;
             ProgressB.Maximum = System.IO.File.ReadAllLines(Path).Length;
             BarLineAll.Content = ProgressB.Maximum;
@@ -79,7 +83,7 @@ namespace Parser
         private ParserSettings FormationSettings()
         {
             string RezPath = PathRezT.Text + "/" + DateTime.Now.Year + "_" + DateTime.Now.Month + "_" + DateTime.Now.Day + "_" + ProductComboBox.SelectedItem.ToString() + "_info.txt";
-            return new ParserSettings(Path, Convert.ToInt32(NumberLinesT.Text), Convert.ToInt32(MainColumnsT.Text), RezPath, TitleT.Text, FormattingT.Text, this, PresenceHeaders.IsChecked.Value, Convert.ToInt32(PackT.Text));
+            return new ParserSettings(Path, Convert.ToInt32(NumberLinesT.Text), Convert.ToInt32(MainColumnsT.Text), RezPath, TitleT.Text, FormattingT.Text, this, PresenceHeaders.IsChecked.Value, Convert.ToInt32(PackT.Text), Convert.ToInt32(NumberLengthT.Text));
         }
 
         private void SearchB_Click(object sender, RoutedEventArgs e)

@@ -71,6 +71,8 @@
     <Compile Include="Data\Encryption.cs" />
     <Compile Include="Data\WorkLog.cs" />
     <Compile Include="Data\WorkUser.cs" />
+    <Compile Include="Entities\ActiveUser.cs" />
+    <Compile Include="Entities\RecordingLog.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Services\LogMenager.cs" />
     <Compile Include="Services\UserManager.cs" />

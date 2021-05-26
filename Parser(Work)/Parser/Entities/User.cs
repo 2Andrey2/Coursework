@@ -14,7 +14,9 @@ namespace Parser.Entities
         public string MiddleName { get; set; }
         public string Telephone { get; set; }
         public string Login { get; set; }
+        int LoginHeh;
         public string Password { get; set; }
+        int PasswordHeh;
         public string Position { get; set; }
         public User(string[] massdata)
         {
@@ -25,6 +27,19 @@ namespace Parser.Entities
             Login = massdata[4];
             Password = massdata[5];
             Position = massdata[6];
+            LoginHeh = Convert.ToInt32(massdata[7]);
+            PasswordHeh = Convert.ToInt32(massdata[8]);
+        }
+        public bool AuthorizationCheck(int[] info)
+        {
+            if(LoginHeh == info[0] && PasswordHeh == info[1])
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

@@ -15,7 +15,7 @@
         <Label Content="Пароль" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" FontFamily="Times New Roman"/>
         <materialDesign:PackIcon Kind="Account" Margin="327,6,0,0" Height="54" Width="54" RenderTransformOrigin="0.076,0.578" />
         <materialDesign:PackIcon Kind="KeyVariant" Height="54" Width="54" Margin="327,59,0,0" />
-        <Button Content="Вход" Margin="10,120,327.6,0" HorizontalContentAlignment="Center" FontSize="20" FontFamily="Times New Roman" FontWeight="Bold" Height="50" Click="entrance" VerticalAlignment="Top" />
-        <Button Content="Администрирование" Margin="217,118,9.6,0" HorizontalContentAlignment="Center" FontSize="20" FontFamily="Times New Roman" FontWeight="Bold" Height="52" Click="entrance" RenderTransformOrigin="1.259,0.612" VerticalAlignment="Top" />
+        <Button Name="entrance" Content="Вход" Margin="10,120,327.6,0" HorizontalContentAlignment="Center" FontSize="20" FontFamily="Times New Roman" FontWeight="Bold" Height="50" VerticalAlignment="Top" Click="entrance_Click" />
+        <Button Name="Administration" Content="Администрирование" Margin="217,118,9.6,0" HorizontalContentAlignment="Center" FontSize="20" FontFamily="Times New Roman" FontWeight="Bold" Height="52" Click="Administration_Click" RenderTransformOrigin="1.259,0.612" VerticalAlignment="Top" />
     </Grid>
 </Window>

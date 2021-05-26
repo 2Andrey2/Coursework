@@ -1,4 +1,6 @@
-﻿using Parser.Views;
+﻿using Parser.Entities;
+using Parser.Services;
+using Parser.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,10 +27,45 @@ namespace Parser
             InitializeComponent();
         }
 
-        private void entrance(object sender, RoutedEventArgs e)
+        private void entrance_Click(object sender, RoutedEventArgs e)
         {
-            Administration administration = new Administration();
-            administration.ShowDialog();
+            UserManager userManager = new UserManager("UserFile.user");
+            if (userManager.Authorization(new int[] { LoginT.Text.GetHashCode(), PasswordT.Password.GetHashCode() }) == false)
+            {
+                MessageBox.Show("Ошибка авторизации");
+            }
+            else
+            {
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.ShowDialog();
+            }
+        }
+
+        private void Administration_Click(object sender, RoutedEventArgs e)
+        {
+            if (LoginT.Text == "Прораб Андрей" && PasswordT.Password == "Уникальный код")
+            {
+                Administration administration = new Administration();
+                administration.ShowDialog();
+                return;
+            }
+            UserManager userManager = new UserManager("UserFile.user");
+            if (userManager.Authorization(new int[] { LoginT.Text.GetHashCode(), PasswordT.Password.GetHashCode() }) == false)
+            {
+                MessageBox.Show("Ошибка авторизации");
+            }
+            else
+            {
+                if (ActiveUser.user.Position == "Администратор")
+                {
+                    Administration administration = new Administration();
+                    administration.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Недостаточно прав");
+                }
+            }
         }
     }
 }

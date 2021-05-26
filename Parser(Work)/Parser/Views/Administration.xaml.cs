@@ -1,19 +1,8 @@
 ﻿using Parser.Entities;
 using Parser.Services;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using System.Windows.Forms;
 
 namespace Parser.Views
 {
@@ -31,63 +20,78 @@ namespace Parser.Views
             InitializeComponent();
             GridOperations = new DataGridOperations(TableUserMain);
             manager = new UserManager("UserFile.user");
-            LogMenager = new LogMenager("Log.bd");
+            LogMenager = new LogMenager();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            User[] massrez = manager.SetUserAll();
-            if (massrez == null)
-            {
-                MessageBox.Show("Пользователи не найдены");
-                return;
-            }
-            for (int i = 0; i < massrez.Length; i++)
-            {
-                GridOperations.AddItem(massrez[i]);
-            }
-            GridOperations.UpdatingGrid();
+            GridOperations.UpdatingGrid(manager);
         }
 
         private void Further_Click(object sender, RoutedEventArgs e)
         {
-            User user = new User(GetTextBox());
-            manager.CreatedUser(user);
+            DialogResult dialogResult = System.Windows.Forms.MessageBox.Show("Вы действиетельно хотите создать пользователя", "Создание пользователя", MessageBoxButtons.YesNo);
+            if (dialogResult == System.Windows.Forms.DialogResult.Yes)
+            {
+                LogMenager log = new LogMenager();
+                User user = new User(GetTextBox());
+                manager.CreatedUser(user);
+                log.CreateRecord(new string[] { "Создание пользователя: " + nameT.Text + ", " + SurnameT.Text, " Выполнил: " + ActiveUser.user.Name + " " + ActiveUser.user.Surname + " " });
+            }
         }
 
         private void TableUserMain_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            DataGrid data = (DataGrid)sender;
-            userselected = data.SelectedItem as User;
-            nameT.Text = userselected.Name;
-            SurnameT.Text = userselected.Surname;
-            middleNameT.Text = userselected.MiddleName;
-            telephoneT.Text = userselected.Telephone;
-            LoginT.Text = userselected.Login;
-            PasswordT.Text = userselected.Password;
-            position.Text = userselected.Position;
+            try
+            {
+                System.Windows.Controls.DataGrid data = (System.Windows.Controls.DataGrid)sender;
+                userselected = data.SelectedItem as User;
+                nameT.Text = userselected.Name;
+                SurnameT.Text = userselected.Surname;
+                middleNameT.Text = userselected.MiddleName;
+                telephoneT.Text = userselected.Telephone;
+                LoginT.Text = userselected.Login;
+                PasswordT.Text = userselected.Password;
+                position.Text = userselected.Position;
+            }
+            catch { }
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-            if (userselected == null) { MessageBox.Show("Выберете пользователя"); }
-            manager.DeleteUser(userselected);
-            GridOperations.UpdatingGrid();
+            DialogResult dialogResult = System.Windows.Forms.MessageBox.Show("Вы действиетельно хотите удалить выбраного пользователя", "Удаление пользователя", MessageBoxButtons.YesNo);
+            if (dialogResult == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (userselected == null) { System.Windows.Forms.MessageBox.Show("Выберете пользователя"); }
+                LogMenager log = new LogMenager();
+                manager.DeleteUser(userselected);
+                GridOperations.UpdatingGrid(manager);
+                log.CreateRecord(new string[] { "Удаление пользователя: " + nameT.Text + ", " + SurnameT.Text, " Выполнил: " + ActiveUser.user.Name + " " + ActiveUser.user.Surname + " " });
+            }
         }
         private string[] GetTextBox ()
         {
-            return new string[] { nameT.Text, SurnameT.Text, middleNameT.Text, telephoneT.Text, LoginT.Text, PasswordT.Text, position.Text };
+            return new string[] { nameT.Text, SurnameT.Text, middleNameT.Text, telephoneT.Text,
+            LoginT.Text, PasswordT.Text, position.Text, LoginT.Text.GetHashCode().ToString(), PasswordT.Text.GetHashCode().ToString() };
         }
 
         private void Refresh_Click(object sender, RoutedEventArgs e)
         {
-            GridOperations.UpdatingGrid();
+            GridOperations.UpdatingGrid(manager);
         }
 
         private void LogB_Click(object sender, RoutedEventArgs e)
         {
-            Log log = new Log(LogMenager.DownloadLog());
-            log.ShowDialog();
+            RecordingLog[] mass = LogMenager.DownloadLog();
+            if (mass != null)
+            {
+                Log log = new Log(mass);
+                log.ShowDialog();
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

@@ -1,10 +1,12 @@
 ﻿using Parser.Entities;
+using Parser.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Parser.Views
@@ -23,8 +25,20 @@ namespace Parser.Views
         {
             connectionUser.Add(user);
         }
-        public void UpdatingGrid()
+        public void UpdatingGrid(UserManager manager)
         {
+
+            connectionUser.Clear();
+            User[] massrez = manager.SetUserAll();
+            if (massrez == null)
+            {
+                MessageBox.Show("Пользователи не найдены");
+                return;
+            }
+            for (int i = 0; i < massrez.Length; i++)
+            {
+                AddItem(massrez[i]);
+            }
             DataGrid.Items.Refresh();
         }
     }

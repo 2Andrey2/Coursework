@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Parser.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,12 +20,12 @@ namespace Parser.Views
     /// </summary>
     public partial class Log : Window
     {
-        public Log(string[] mass)
+        public Log(RecordingLog[] mass)
         {
             InitializeComponent();
             for (int i = 0; i < mass.Length; i++)
             {
-                LogBox.Text += mass[i] + Environment.NewLine;
+                LogBox.Text += mass[i].Action + mass[i].User + mass[i].Data + Environment.NewLine;
             }
         }
     }

@@ -1,4 +1,6 @@
-﻿using Parser.Views;
+﻿using Parser.Entities;
+using Parser.Services;
+using Parser.Views;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -33,6 +35,8 @@ namespace Parser
 
         private void SearchB_Click(object sender, RoutedEventArgs e)
         {
+            LogMenager log = new LogMenager();
+            log.CreateRecord(new string[] { "Поиск: " + ProductComboBox.Text + ", " + Settings.Path, " Выполнил: " + ActiveUser.user.Name + " " + ActiveUser.user.Surname + " " });
             filtre = null;
             SearchResultsT.Text = null;
             string tempreg;

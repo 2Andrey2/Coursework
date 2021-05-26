@@ -17,6 +17,20 @@ namespace Parser.Services
         {
             workuser = new WorkUser(Path);
         }
+        public bool Authorization(int[] infouser)
+        {
+            User[] alluser = SetUserAll();
+            if (alluser == null) { return false; }
+            for (int i = 0; i < alluser.Length; i++)
+            {
+                if (alluser[i].AuthorizationCheck(infouser) == true)
+                {
+                    ActiveUser.user = alluser[i];
+                    return true;
+                }
+            }
+            return false;
+        }
         public User[] SetUserAll()
         {
             try
@@ -32,6 +46,14 @@ namespace Parser.Services
         public void CreatedUser(User user)
         {
             User[] alluser = SetUserAll();
+            for (int i = 0; i < alluser.Length; i++)
+            {
+                if (alluser[i].Login == user.Login)
+                {
+                    MessageBox.Show("Потльзатель с таким логином уже зарегистрирован");
+                    return;
+                }
+            }
             User[] newalluser;
             if (alluser != null)
             {
