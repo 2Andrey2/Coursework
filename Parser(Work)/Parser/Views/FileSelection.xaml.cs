@@ -20,10 +20,11 @@ namespace Parser
         private void FileSelectionB_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog file = new OpenFileDialog();
+            file.Multiselect = true;
             file.Filter = "Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*";
             if (file.ShowDialog() == DialogResult.OK)
             {
-                frame.Navigate(new ParserSetup(file.FileName));
+                frame.Navigate(new ParserSetup(file.FileNames));
             }
             else
             {

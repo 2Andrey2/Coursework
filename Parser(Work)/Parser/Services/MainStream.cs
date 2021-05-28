@@ -10,14 +10,15 @@ using static Parser.ParserSetup;
 
 namespace Parser
 {
-    class MainStream: MainStream_dop
+    class MainStream : MainStream_dop
     {
-        public MainStream(ParserSettings parserSettings) : base (parserSettings)
+        public MainStream(ParserSettings parserSettings) : base(parserSettings)
         {
 
         }
-        public void RumWork ()
+        public void RumWork()
         {
+            int tempnum = 0;
             if (RunDataChecks() == true) { return; }
             WorkFile workFile = new WorkFile(settings.Path, settings.PathRez, settings.Title, settings.Pack, GetNumberBlocks());
             Task[] masstask = new Task[3]; // Ссколько будет использоваться потоков, пока синхронизиции нет 3
@@ -56,6 +57,15 @@ namespace Parser
                     else
                     {
                         i++;
+                    }
+                    if (tempnum == 50)
+                    {
+                        settings.Parser.Dispatcher.BeginInvoke((Action)(() => settings.Parser.UpdateProgressBar((settings.CountLine * settings.CountColumns)*50)));
+                        tempnum = 0;
+                    }
+                    else
+                    {
+                        tempnum++;
                     }
                 }
             }

@@ -68,7 +68,6 @@ namespace Parser
                 {
                     file.WriteTitle();
                     file.WriteFile(finmass);
-                    parser.Dispatcher.BeginInvoke((Action)(() => parser.UpdateProgressBar()));
                 }
             }
             catch (Exception ex)

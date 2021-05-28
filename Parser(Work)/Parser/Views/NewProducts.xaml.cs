@@ -45,7 +45,7 @@ namespace Parser
             {
                 return;
             }
-            string[] info = new string[] { ProductTypeT.Text, NumberLinesT.Text, MainColumnsT.Text, PathRezT.Text, TitleT.Text, FormattingT.Text, Convert.ToString(PresenceHeaders.IsChecked), PackT.Text };
+            string[] info = new string[] { ProductTypeT.Text, NumberLinesT.Text, MainColumnsT.Text, PathRezT.Text, TitleT.Text, FormattingT.Text, Convert.ToString(PresenceHeaders.IsChecked), PackT.Text, NumberLengthT.Text };
             ProductType product = new ProductType();
             ProductWork work = new ProductWork();
             product.infowrite(info);
@@ -73,7 +73,7 @@ namespace Parser
         {
             try
             {
-                Regex regex = new Regex(@"^(\d;)+");
+                Regex regex = new Regex(@"^(\d;)+\d$");
                 Convert.ToInt32(NumberLinesT.Text);
                 Convert.ToInt32(MainColumnsT.Text);
                 Convert.ToInt32(PackT.Text);

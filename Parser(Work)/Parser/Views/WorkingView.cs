@@ -46,7 +46,7 @@ namespace Parser.Views
                     if (massType[i].NameProduct == Selection)
                     {
                         return new string[] { Convert.ToString(massType[i].CountLine), Convert.ToString(massType[i].CountColumns), massType[i].PathRez,
-                        massType[i].Title, massType[i].Formatting, Convert.ToString(massType[i].PresenceHeaders), Convert.ToString(massType[i].Pack)};
+                        massType[i].Title, massType[i].Formatting, Convert.ToString(massType[i].PresenceHeaders), Convert.ToString(massType[i].Pack), Convert.ToString(massType[i].NumberLength)};
                     }
                 }
             }

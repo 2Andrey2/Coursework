@@ -14,10 +14,10 @@ namespace Parser
     /// </summary>
     public partial class ParserSetup : Page
     {
-        string Path;
+        string[] Path;
         ProductWork work = new ProductWork();
         WorkingView view = new WorkingView();
-        public ParserSetup(string path)
+        public ParserSetup(string[] path)
         {
             InitializeComponent();
             ParamG.IsEnabled = false;
@@ -25,18 +25,26 @@ namespace Parser
         }
         private void Run_Click(object sender, RoutedEventArgs e)
         {
-            LogMenager log = new LogMenager();
-            log.CreateRecord(new string[] { "Создание отчета: " + ProductComboBox.Text + ", " + Path, " Выполнил: " + ActiveUser.user.Name + " " + ActiveUser.user.Surname + " "});
+            int temp = 0;
+            for (int i = 0; i < Path.Length; i++)
+            {
+                temp += System.IO.File.ReadAllLines(Path[i]).Length;
+            }
+            ProgressB.Maximum = temp;
             ProgressB.Value = 0;
-            ProgressB.Maximum = System.IO.File.ReadAllLines(Path).Length;
             BarLineAll.Content = ProgressB.Maximum;
-            MainStream stream = new MainStream(FormationSettings());
-            Task task = new Task(() => stream.RumWork());
-            task.Start();
+            for (int i = 0; i < Path.Length; i++)
+            {
+                LogMenager log = new LogMenager();
+                log.CreateRecord(new string[] { "Создание отчета: " + ProductComboBox.Text + ", " + Path[i], " Выполнил: " + ActiveUser.user.Name + " " + ActiveUser.user.Surname + " " });
+                MainStream stream = new MainStream(FormationSettings(i));
+                Task task = new Task(() => stream.RumWork());
+                task.Start();
+            }
         }
-        public void UpdateProgressBar()
+        public void UpdateProgressBar(int num)
         {
-            ProgressB.Value = ProgressB.Value + (Convert.ToInt32(NumberLinesT.Text) * Convert.ToInt32(MainColumnsT.Text));
+            ProgressB.Value = ProgressB.Value + num;
             BarLineNau.Content = ProgressB.Value;
         }
 
@@ -52,6 +60,7 @@ namespace Parser
                 FormattingT.Text = rezmass[4];
                 PresenceHeaders.IsChecked = Convert.ToBoolean(rezmass[5]);
                 PackT.Text = rezmass[6];
+                NumberLengthT.Text = rezmass[7];
                 ParamG.IsEnabled = true;
             }
             catch { }
@@ -80,15 +89,15 @@ namespace Parser
         {
             PathRezT.Text = view.FolderSelection();
         }
-        private ParserSettings FormationSettings()
+        private ParserSettings FormationSettings(int i)
         {
-            string RezPath = PathRezT.Text + "/" + DateTime.Now.Year + "_" + DateTime.Now.Month + "_" + DateTime.Now.Day + "_" + ProductComboBox.SelectedItem.ToString() + "_info.txt";
-            return new ParserSettings(Path, Convert.ToInt32(NumberLinesT.Text), Convert.ToInt32(MainColumnsT.Text), RezPath, TitleT.Text, FormattingT.Text, this, PresenceHeaders.IsChecked.Value, Convert.ToInt32(PackT.Text), Convert.ToInt32(NumberLengthT.Text));
+            string RezPath = PathRezT.Text + "/" + DateTime.Now.Year + "_" + DateTime.Now.Month + "_" + DateTime.Now.Day + "_" + DateTime.Now.TimeOfDay.Hours + "_" + DateTime.Now.TimeOfDay.Minutes + "_" + ProductComboBox.SelectedItem.ToString() + "("+ i + ")" + "_info.txt";
+            return new ParserSettings(Path[i], Convert.ToInt32(NumberLinesT.Text), Convert.ToInt32(MainColumnsT.Text), RezPath, TitleT.Text, FormattingT.Text, this, PresenceHeaders.IsChecked.Value, Convert.ToInt32(PackT.Text), Convert.ToInt32(NumberLengthT.Text));
         }
 
         private void SearchB_Click(object sender, RoutedEventArgs e)
         {
-            Search search = new Search(FormationSettings());
+            Search search = new Search(FormationSettings(0));
             search.ShowDialog();
         }
     }

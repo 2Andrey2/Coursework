@@ -25,22 +25,23 @@
         <TextBox x:Name ="BoxT" Height="42" Margin="222,123,0,0" TextWrapping="Wrap" Text="Коробка" VerticalAlignment="Top" FontSize="25" HorizontalAlignment="Left" Width="106"/>
         <TextBox x:Name ="NumberT" Height="40" Margin="333,125,0,0" TextWrapping="Wrap" Text="Рапорт" VerticalAlignment="Top" FontSize="25" HorizontalAlignment="Left" Width="87"/>
         <TextBox x:Name ="DormRoomT" Height="39" Margin="222,167,0,0" TextWrapping="Wrap" Text="Общий номер" VerticalAlignment="Top" FontSize="25" HorizontalAlignment="Left" Width="198"/>
-        <TextBox x:Name ="LineElementT" Height="39" Margin="222,211,0,0" TextWrapping="Wrap" Text="Элемент строки" VerticalAlignment="Top" FontSize="25" HorizontalAlignment="Left" Width="198"/>
+        <TextBox x:Name ="ProductSerialT" Height="39" Margin="222,211,0,0" TextWrapping="Wrap" Text="Серия" VerticalAlignment="Top" FontSize="25" HorizontalAlignment="Left" Width="106"/>
+        <TextBox x:Name ="ProductNumberT" Height="39" Margin="333,211,0,0" TextWrapping="Wrap" Text="Номер" VerticalAlignment="Top" FontSize="25" HorizontalAlignment="Left" Width="87"/>
         <CheckBox
             x:Name="CheckBoxBox"
             IsThreeState="False"
             IsChecked="false"
-            Content="Посик по коробкам" Margin="10,133,0,0" FontSize="20" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="207"/>
+            Content="Поиск по коробкам" Margin="10,133,0,0" FontSize="20" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="207"/>
         <CheckBox
             x:Name="CheckBoxAllline"
             IsThreeState="False"
             IsChecked="false"
-            Content="Посик по номеру" Margin="10,174,0,0" FontSize="20" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="207"/>
+            Content="Поиск по номеру" Margin="10,174,0,0" FontSize="20" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="207"/>
         <CheckBox
             x:Name="CheckBoxline"
             IsThreeState="False"
             IsChecked="false"
-            Content="Посик по строкам" Margin="10,218,0,0" FontSize="20" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="207"/>
+            Content="Поиск по строкам" Margin="10,218,0,0" FontSize="20" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="207"/>
         <Button x:Name="SearchB"
             Style="{StaticResource MaterialDesignFlatDarkBgButton}"
             ToolTip="Выполняет форматирование файла"
@@ -51,6 +52,7 @@
             Style="{StaticResource MaterialDesignFilledComboBox}"
             IsEnabled="{Binding IsChecked, ElementName=FilledComboBoxEnabledCheckBox}"
             materialDesign:HintAssist.Hint="Выбирите продукт" Margin="189,10,0,0" Height="61" VerticalAlignment="Top" HorizontalAlignment="Left" Width="332" SelectionChanged="ProductComboBox_SelectionChanged"/>
+        <Button Name="SavingResult" Content="Сохранить в файл" HorizontalAlignment="Left" Margin="595,218,0,0" VerticalAlignment="Top" Width="182" Click="SavingResult_Click"/>
 
     </Grid>
 </Window>
