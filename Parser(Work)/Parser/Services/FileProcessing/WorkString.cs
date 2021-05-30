@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using static Parser.MainStream;
 using static Parser.ParserSetup;
 
 namespace Parser
@@ -21,7 +22,7 @@ namespace Parser
             countColumns = CountColumns;
             formatlong = formatting.Split(';');
         }
-        public void BuildingBlock(string[] massline, WorkFile file, ParserSetup parser)
+        public void BuildingBlock(string[] massline, ProductMenager workFile, ParserSetup parser, AccountHandler Notify)
         {
             string[,] mainmass = new string[countLine, countColumns];
             int LineNumber = 0;
@@ -66,13 +67,14 @@ namespace Parser
                 }
                 lock (lockerW)
                 {
-                    file.WriteTitle();
-                    file.WriteFile(finmass);
+                    workFile.WriteTitle();
+                    workFile.WriteLineMass(finmass);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, ex.StackTrace);
+                Notify?.Invoke();
             }
         }
         private void StringConversion(string text, int LineNumber, int ColumnNumber, string[,] mainmass)

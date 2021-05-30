@@ -67,40 +67,40 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Data\Byte.cs" />
-    <Compile Include="Data\Encryption.cs" />
-    <Compile Include="Data\WorkLog.cs" />
-    <Compile Include="Data\WorkUser.cs" />
-    <Compile Include="Entities\ActiveUser.cs" />
-    <Compile Include="Entities\RecordingLog.cs" />
-    <Compile Include="Entities\User.cs" />
-    <Compile Include="Services\LogMenager.cs" />
-    <Compile Include="Services\UserManager.cs" />
+    <Compile Include="Data\DataProcessing\Byte.cs" />
+    <Compile Include="Data\DataProcessing\Encryption.cs" />
+    <Compile Include="Data\WirkFileGrup\WorkLog.cs" />
+    <Compile Include="Data\WirkFileGrup\WorkUser.cs" />
+    <Compile Include="Entities\Subsidiary\ActiveUser.cs" />
+    <Compile Include="Entities\Main\RecordingLog.cs" />
+    <Compile Include="Entities\Main\User.cs" />
+    <Compile Include="Services\MenagerGrup\LogMenager.cs" />
+    <Compile Include="Services\MenagerGrup\UserManager.cs" />
     <Compile Include="Views\Administration.xaml.cs">
       <DependentUpon>Administration.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Authorization.xaml.cs">
       <DependentUpon>Authorization.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Services\ChecksFile.cs" />
-    <Compile Include="Services\MainStream_dop.cs" />
-    <Compile Include="Views\DataGridOperations.cs" />
+    <Compile Include="Services\FileProcessing\ChecksFile.cs" />
+    <Compile Include="Services\FileProcessing\MainStream_dop.cs" />
+    <Compile Include="Views\OperationsVisualComponents\DataGridOperations.cs" />
     <Compile Include="Views\Log.xaml.cs">
       <DependentUpon>Log.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Search.xaml.cs">
       <DependentUpon>Search.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Services\MainStream.cs" />
+    <Compile Include="Services\FileProcessing\MainStream.cs" />
     <Compile Include="Views\NewProducts.xaml.cs">
       <DependentUpon>NewProducts.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Entities\ParserSettings.cs" />
-    <Compile Include="Entities\ProductType.cs" />
-    <Compile Include="Services\ProductWork.cs" />
-    <Compile Include="Data\WorkFile.cs" />
-    <Compile Include="Services\WorkString.cs" />
-    <Compile Include="Views\WorkingView.cs" />
+    <Compile Include="Entities\Subsidiary\ParserSettings.cs" />
+    <Compile Include="Entities\Main\ProductType.cs" />
+    <Compile Include="Services\MenagerGrup\ProductMenager.cs" />
+    <Compile Include="Data\WirkFileGrup\WorkFile.cs" />
+    <Compile Include="Services\FileProcessing\WorkString.cs" />
+    <Compile Include="Views\OperationsVisualComponents\WorkingView.cs" />
     <Page Include="Views\Administration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

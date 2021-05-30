@@ -15,7 +15,7 @@ namespace Parser
     public partial class ParserSetup : Page
     {
         string[] Path;
-        ProductWork work = new ProductWork();
+        ProductMenager work = new ProductMenager();
         WorkingView view = new WorkingView();
         public ParserSetup(string[] path)
         {

@@ -74,14 +74,14 @@ namespace Parser
         private string[] SearchF(Regex filtreT, ParserSettings Settings, bool line)
         {
             string[] massrez = new string[Settings.CountLine + 1];
-            WorkFile workFile = new WorkFile(Settings.Path, Settings.PathRez);
+            WorkFile workFile = new WorkFile();
             int fulllines = System.IO.File.ReadAllLines(Settings.Path).Length;
-            StreamReader fileR = workFile.ReaderRezPathOpen();
+            workFile.OpenFilePathReader(Settings.Path);
             int flagtitle = Settings.CountLine+1;
             string title = "";
             while (true)
             {
-                string temp = fileR.ReadLine();
+                string temp = workFile.ReadLine();
                 if (temp == null) { break; }
                 if (flagtitle == Settings.CountLine+1)
                 {
@@ -97,7 +97,7 @@ namespace Parser
                         flagtitle = Settings.CountLine;
                         for (int j = 1; j < Settings.CountLine; j++)
                         {
-                            massrez[j] = fileR.ReadLine();
+                            massrez[j] = workFile.ReadLine();
                         }
                     }
                     else { massrez[0] = title; massrez[1] = temp; }
@@ -108,7 +108,7 @@ namespace Parser
                 }
                 else { flagtitle++; }
             }
-            workFile.ReaderRezPathClose();
+            workFile.CloseFileR();
             return massrez;
         }
 
@@ -145,6 +145,8 @@ namespace Parser
             StreamWriter fileW = new StreamWriter(path + "/" + DateTime.Now.Year + "_" + DateTime.Now.Month + "_" + DateTime.Now.Day + "_" + DateTime.Now.TimeOfDay.Hours + "_" + DateTime.Now.TimeOfDay.Minutes + "_" + "Search_" + ".txt");
             fileW.Write(SearchResultsT.Text);
             fileW.Close();
+            LogMenager log = new LogMenager();
+            log.CreateRecord(new string[] { "Вывод поиска в папку: " + path + " Выполнил: " + ActiveUser.user.Name + " " + ActiveUser.user.Surname + " " });
         }
     }
 }

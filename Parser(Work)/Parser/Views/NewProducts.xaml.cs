@@ -47,14 +47,14 @@ namespace Parser
             }
             string[] info = new string[] { ProductTypeT.Text, NumberLinesT.Text, MainColumnsT.Text, PathRezT.Text, TitleT.Text, FormattingT.Text, Convert.ToString(PresenceHeaders.IsChecked), PackT.Text, NumberLengthT.Text };
             ProductType product = new ProductType();
-            ProductWork work = new ProductWork();
+            ProductMenager work = new ProductMenager();
             product.infowrite(info);
             work.ProductRecord(product);
         }
 
         private void ProductRemovingB_Click(object sender, RoutedEventArgs e)
         {
-            ProductWork work = new ProductWork();
+            ProductMenager work = new ProductMenager();
             ProductType[] mass = work.ReadingProduct();
             for (int i = 0; i < mass.Length; i++)
             {

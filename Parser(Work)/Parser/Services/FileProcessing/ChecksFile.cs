@@ -23,8 +23,8 @@ namespace Parser.Services
         public bool RunningChecks(bool title, int blok)
         
         {
-            WorkFile workFile = new WorkFile(null, Path);
-            StreamReader reader = workFile.ReaderRezPathOpen();
+            ProductMenager workFile = new ProductMenager();
+            workFile.OpenFilePathR(Path);
             var set = new HashSet<string>();
             int flag = blok;
             int longfile = System.IO.File.ReadAllLines(Path).Length;
@@ -34,10 +34,10 @@ namespace Parser.Services
             {
                 if (title = true && flag == blok)
                 {
-                    reader.ReadLine();
+                    workFile.ReadLine();
                     flag = 0;
                 }
-                string temp = reader.ReadLine();
+                string temp = workFile.ReadLine();
                 if (temp == null)
                 {
                     return false;

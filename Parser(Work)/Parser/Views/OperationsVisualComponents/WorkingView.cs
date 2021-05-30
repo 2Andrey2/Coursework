@@ -11,7 +11,7 @@ namespace Parser.Views
     class WorkingView
     {
         ProductType[] massType;
-        ProductWork work = new ProductWork();
+        ProductMenager work = new ProductMenager();
         public string FolderSelection()
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();

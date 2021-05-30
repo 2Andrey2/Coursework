@@ -29,12 +29,7 @@ namespace Parser
 
         private void entrance_Click(object sender, RoutedEventArgs e)
         {
-            UserManager userManager = new UserManager("UserFile.user");
-            if (userManager.Authorization(new int[] { LoginT.Text.GetHashCode(), PasswordT.Password.GetHashCode() }) == false)
-            {
-                MessageBox.Show("Ошибка авторизации");
-            }
-            else
+            if (AuthorizationAttempt() == true)
             {
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.ShowDialog();
@@ -49,12 +44,7 @@ namespace Parser
                 administration.ShowDialog();
                 return;
             }
-            UserManager userManager = new UserManager("UserFile.user");
-            if (userManager.Authorization(new int[] { LoginT.Text.GetHashCode(), PasswordT.Password.GetHashCode() }) == false)
-            {
-                MessageBox.Show("Ошибка авторизации");
-            }
-            else
+            if (AuthorizationAttempt() == true)
             {
                 if (ActiveUser.user.Position == "Администратор")
                 {
@@ -65,6 +55,19 @@ namespace Parser
                 {
                     MessageBox.Show("Недостаточно прав");
                 }
+            }
+        }
+        private bool AuthorizationAttempt ()
+        {
+            UserManager userManager = new UserManager("UserFile.user");
+            if (userManager.Authorization(new int[] { LoginT.Text.GetHashCode(), PasswordT.Password.GetHashCode() }) == false)
+            {
+                MessageBox.Show("Ошибка авторизации");
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
     }
