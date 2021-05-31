@@ -1,5 +1,7 @@
-﻿using Parser.Entities;
+﻿using OfficeOpenXml;
+using Parser.Entities;
 using Parser.Services;
+using Parser.Services.Excel;
 using Parser.Views;
 using System;
 using System.Collections.Generic;
@@ -32,13 +34,17 @@ namespace Parser
             InitializeComponent();
             Settings = settings;
         }
-
+        public Search()
+        {
+            InitializeComponent();
+            Settings = new ParserSettings();
+        }
         private void SearchB_Click(object sender, RoutedEventArgs e)
         {
             LogMenager log = new LogMenager();
             log.CreateRecord(new string[] { "Поиск: " + ProductComboBox.Text + ", " + Settings.Path, " Выполнил: " + ActiveUser.user.Name + " " + ActiveUser.user.Surname + " " });
             filtre = null;
-            SearchResultsT.Text = null;
+            SearchResultsL.Items.Clear();
             string tempreg;
             if (CheckBoxBox.IsChecked == true)
             {
@@ -68,15 +74,15 @@ namespace Parser
                 MessageBox.Show("Укажите параметры поиска");
                 return;
             }
-            string[] mass = SearchF(filtre, Settings, CheckBoxline.IsChecked.Value);
-        }
+            SearchF(filtre, Settings, CheckBoxline.IsChecked.Value);
 
+        }
         private string[] SearchF(Regex filtreT, ParserSettings Settings, bool line)
         {
             string[] massrez = new string[Settings.CountLine + 1];
             WorkFile workFile = new WorkFile();
-            int fulllines = System.IO.File.ReadAllLines(Settings.Path).Length;
-            workFile.OpenFilePathReader(Settings.Path);
+            int fulllines = System.IO.File.ReadAllLines(Settings.PathRez).Length;
+            workFile.OpenFilePathReader(Settings.PathRez);
             int flagtitle = Settings.CountLine+1;
             string title = "";
             while (true)
@@ -103,7 +109,7 @@ namespace Parser
                     else { massrez[0] = title; massrez[1] = temp; }
                     for (int i = 0; i < massrez.Length; i++)
                     {
-                        SearchResultsT.Text += massrez[i] + Environment.NewLine;
+                        SearchResultsL.Items.Add(massrez[i]);
                     }
                 }
                 else { flagtitle++; }
@@ -142,11 +148,47 @@ namespace Parser
         private void SavingResult_Click(object sender, RoutedEventArgs e)
         {
             string path = view.FolderSelection();
-            StreamWriter fileW = new StreamWriter(path + "/" + DateTime.Now.Year + "_" + DateTime.Now.Month + "_" + DateTime.Now.Day + "_" + DateTime.Now.TimeOfDay.Hours + "_" + DateTime.Now.TimeOfDay.Minutes + "_" + "Search_" + ".txt");
-            fileW.Write(SearchResultsT.Text);
-            fileW.Close();
-            LogMenager log = new LogMenager();
-            log.CreateRecord(new string[] { "Вывод поиска в папку: " + path + " Выполнил: " + ActiveUser.user.Name + " " + ActiveUser.user.Surname + " " });
+            if (path != "")
+            {
+                if (GraphicsModeC.IsChecked == true)
+                {
+                    try
+                    {
+                        int temp = 0;
+                        MarketExcelGenerator generator = new MarketExcelGenerator();
+                        int countbloks = SearchResultsL.Items.Count / (Settings.CountLine+1);
+                        for (int i = 0; i < countbloks; i++)
+                        {
+                            string[] mass = new string[Settings.CountLine];
+                            for (int j = 0; j < Settings.CountLine; j++)
+                            {
+                                mass[j] = SearchResultsL.Items[temp].ToString();
+                                temp++;
+                            }
+                            var reportData = new MarketReporter().GetReport(mass, Settings);
+                            generator.Bildblok(reportData, Settings, i);
+                            temp++;
+                        }
+                        var reportExcel = generator.Generate();
+                        File.WriteAllBytes(path + "/" + "Report.xlsx", reportExcel);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ошибка! Блоки не обнаружены, или они не полны");
+                    }
+                }
+                else
+                {
+                    StreamWriter fileW = new StreamWriter(path + "/" + DateTime.Now.Year + "_" + DateTime.Now.Month + "_" + DateTime.Now.Day + "_" + DateTime.Now.TimeOfDay.Hours + "_" + DateTime.Now.TimeOfDay.Minutes + "_" + "Search_" + ".txt");
+                    for (int i = 0; i < SearchResultsL.Items.Count; i++)
+                    {
+                        fileW.WriteLine(SearchResultsL.Items[i]);
+                    }
+                    fileW.Close();
+                    LogMenager log = new LogMenager();
+                    log.CreateRecord(new string[] { "Вывод поиска в папку: " + path + " Выполнил: " + ActiveUser.user.Name + " " + ActiveUser.user.Surname + " ", "" });
+                }
+            }
         }
     }
 }

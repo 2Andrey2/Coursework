@@ -62,3 +62,8 @@ C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\obj\Debug\V
 C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\obj\Debug\Views\Authorization.baml
 C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\obj\Debug\Views\Log.g.cs
 C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\obj\Debug\Views\Log.baml
+C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\bin\Debug\EPPlus.dll
+C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\bin\Debug\EPPlus.xml
+C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml

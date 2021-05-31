@@ -10,12 +10,28 @@
       Title="FileSelection">
 
     <Grid>
-        <Button x:Name="FileSelectionB"
-            Style="{StaticResource MaterialDesignRaisedDarkButton}"
-            materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="Выбрать файл для обработки" Margin="211,158,225,181.6" FontSize="40" Height="Auto" Click="FileSelectionB_Click" HorizontalContentAlignment="Center">
-            <TextBlock
-              Text="Файл" />
-        </Button>
+        <GroupBox
+              Header="Доступные операции"
+              Style="{DynamicResource MaterialDesignGroupBox}"
+              Margin="218,95,200,114.6"
+              materialDesign:ColorZoneAssist.Mode="SecondaryMid" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" ><Run/><InlineUIContainer>
+                <StackPanel><Button x:Name="FileSelectionB"
+                        Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                        materialDesign:ButtonAssist.CornerRadius="25"
+                        ToolTip="Выбрать файл для обработки" FontSize="40" Height="93" Click="FileSelectionB_Click" HorizontalContentAlignment="Center" Width="364" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center">
+                        <TextBlock
+                            Text="Выбор файла" />
+                    </Button>
+                <Button x:Name="SearchWindows"
+                        Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                        materialDesign:ButtonAssist.CornerRadius="25"
+                        ToolTip="Выбрать файл для обработки" FontSize="40" Height="93" HorizontalContentAlignment="Center" Width="364" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchWindows_Click">
+            <TextBlock Text="Поиск" />
+            </Button>
+                
+                </StackPanel>
+                </InlineUIContainer></TextBlock>
+        </GroupBox>
     </Grid>
 </Page>

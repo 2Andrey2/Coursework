@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Andrey\source\repos\2Andrey2\Coursework\Parser(Work)\Parser\obj\Debug\
+C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\obj\Debug\
 Parser
 none
 false
 DEBUG;TRACE
-C:\Users\Andrey\source\repos\2Andrey2\Coursework\Parser(Work)\Parser\App.xaml
+C:\Users\Andrey\Source\Repos\2Andrey2\Coursework\Parser(Work)\Parser\App.xaml
 8-798549482
 
-32-457894710
-171999531365
+35-1679398663
+25-704814088
 Views\Administration.xaml;Views\Authorization.xaml;Views\Log.xaml;Views\Search.xaml;Views\FileSelection.xaml;Views\MainWindow.xaml;Views\NewProducts.xaml;Views\ParserSetup.xaml;
 
-False
+True
 

@@ -31,5 +31,11 @@ namespace Parser
                 System.Windows.MessageBox.Show("Ошибка");
             }
         }
+
+        private void SearchWindows_Click(object sender, RoutedEventArgs e)
+        {
+            Search search = new Search();
+            search.ShowDialog();
+        }
     }
 }

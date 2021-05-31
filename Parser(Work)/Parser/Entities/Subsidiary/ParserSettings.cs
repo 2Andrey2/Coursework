@@ -31,5 +31,9 @@ namespace Parser
             Pack = pack;
             NumberLength = numberLength;
         }
+        public ParserSettings()
+        {
+
+        }
     }
 }

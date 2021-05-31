@@ -6,17 +6,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Parser"
         mc:Ignorable="d"
-        Title="Search" Height="606" Width="799.6" Loaded="Window_Loaded">
+        Title="Search" Height="606" Width="790.8" Loaded="Window_Loaded">
     <Grid>
-        <TextBox Name="SearchResultsT"
-            Style="{StaticResource MaterialDesignOutlinedTextBox}"
-            VerticalAlignment="Top"
-            Height="267"
-            AcceptsReturn="True"
-            TextWrapping="Wrap"
-            VerticalScrollBarVisibility="Auto"
-            materialDesign:HintAssist.Hint="Результат"
-            IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextBoxEnabledComboBox}" Margin="10,300,0,0" HorizontalAlignment="Left" Width="767" />
         <Label x:Name ="PathSearchL" Content="Путь к поиску" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" FontSize="25" Width="174"/>
         <TextBox x:Name ="PathSearchT" Height="42" Margin="189,78,0,0" TextWrapping="Wrap" Text="C:\Users\Andrey\Desktop\work\MyRez.ini" VerticalAlignment="Top" FontSize="25" HorizontalAlignment="Left" Width="464"/>
         <Button Style="{StaticResource MaterialDesignFloatingActionButton}" ToolTip="MaterialDesignFloatingActionButton" Margin="658,78,0,0" Width="58" Height="43" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click">
@@ -53,6 +44,17 @@
             IsEnabled="{Binding IsChecked, ElementName=FilledComboBoxEnabledCheckBox}"
             materialDesign:HintAssist.Hint="Выбирите продукт" Margin="189,10,0,0" Height="61" VerticalAlignment="Top" HorizontalAlignment="Left" Width="332" SelectionChanged="ProductComboBox_SelectionChanged"/>
         <Button Name="SavingResult" Content="Сохранить в файл" HorizontalAlignment="Left" Margin="595,218,0,0" VerticalAlignment="Top" Width="182" Click="SavingResult_Click"/>
-
+        <ToggleButton Name="GraphicsModeC"
+          Style="{StaticResource MaterialDesignSwitchAccentToggleButton}"
+          ToolTip="MaterialDesignSwitchAccentToggleButton"
+          IsChecked="false" Margin="731,182,10,363.8" />
+        <Label Name="GraphicsModeL" Content="Графический режим" HorizontalAlignment="Left" Margin="647,153,0,0" VerticalAlignment="Top" Width="127"/>
+        <ListView Name="SearchResultsL" HorizontalAlignment="Left" Height="267" Margin="10,300,0,0" VerticalAlignment="Top" Width="767">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>
