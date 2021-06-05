@@ -101,7 +101,7 @@ namespace Parser
                     {
                         massrez[0] = temp;
                         flagtitle = Settings.CountLine;
-                        for (int j = 1; j < Settings.CountLine; j++)
+                        for (int j = 1; j < Settings.CountLine+1; j++)
                         {
                             massrez[j] = workFile.ReadLine();
                         }
@@ -159,15 +159,14 @@ namespace Parser
                         int countbloks = SearchResultsL.Items.Count / (Settings.CountLine+1);
                         for (int i = 0; i < countbloks; i++)
                         {
-                            string[] mass = new string[Settings.CountLine];
-                            for (int j = 0; j < Settings.CountLine; j++)
+                            string[] mass = new string[Settings.CountLine+1];
+                            for (int j = 0; j < Settings.CountLine+1; j++)
                             {
                                 mass[j] = SearchResultsL.Items[temp].ToString();
                                 temp++;
                             }
                             var reportData = new MarketReporter().GetReport(mass, Settings);
                             generator.Bildblok(reportData, Settings, i);
-                            temp++;
                         }
                         var reportExcel = generator.Generate();
                         File.WriteAllBytes(path + "/" + "Report.xlsx", reportExcel);
